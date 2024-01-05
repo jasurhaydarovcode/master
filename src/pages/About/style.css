@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.head1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 700px;
+    background: #070a29;
+}
+
+.section1 {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.section1 span {
+    position: relative;
+    display: block;
+    width: calc(5vw - 2px);
+    height: calc(5vw - 2px);
+    background: #070a29;
+    border: 0px solid #1f1d52;
+    z-index: 2;
+    transition: 1.5s;
+}
+
+.section1 span:hover {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 35px;
+    box-shadow: -5px -5px 15px #1f1d52,
+        5px 5px 15px rgba(0, 0, 0, 0.35);
+    background: #1f1d52;
+    transition: 0s;
+}
+
+@media (max-width: 990px) {
+    .section1 span {
+        width: calc(1vw - 2px);
+        height: calc(1vw - 2px);
+    }
+
+    .signin {
+        width: 90vw;
+    }
+
+    .sign-card {
+        margin-bottom: 40px;
+        margin: auto 10px;
+        padding: 20px;
+        border-radius: 15px;
+        transition: all .5s;
+        border: 2px solid #1f18e2;
+        border-radius: 50%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .sign-card {
+        margin-bottom: 40px;
+        padding: 20px;
+        padding: 40px 10px 10px 10px !important;
+        border-radius: 15px;
+        transition: all .5s;
+        border: 2px solid #1f18e2;
+        border-radius: 50%;
+
+        .p-incard {
+            transform: scale(1);
+            transition: all 0.5s;
+        }
+    }
+
+    .signin {
+        width: 90vw !important;
+        padding: 10px !important;
+    }
+
+    .in-sign {
+        padding: 10px !important;
+        display: flex;
+        flex-direction: column;
+    }
+    .in-sign > div {
+        padding: 20px !important;
+    }
+
+    .in-sign div {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .section1 span {
+        width: calc(5vw - 2px);
+        height: calc(5vw - 2px);
+    }
+}
+@media (max-width: 500px) {
+    .signin {
+        margin-top: 150px;
+    }
+}
+
+
+.signin {
+    position: absolute;
+    width: 80vw;
+    z-index: 2;
+    padding: 40px;
+    border-radius: 4px;
+}
+
+
+
+.in-sign {
+    display: flex;
+    color: aliceblue;
+    width: 100%;
+    padding: 40px;
+    border-radius: 4px;
+}
+
+.sign-card {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: 2px solid #1f1d52;
+    padding: 10px;
+    border-radius: 15px;
+    transition: all .5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sign-card p {
+    transform: scale(0);
+}
+
+
+
+
+.sign-card:hover {
+    padding: 20px;
+    border-radius: 15px;
+    transition: all .5s;
+    border: 2px solid #1f18e2;
+    border-radius: 50%;
+
+    .p-incard {
+        transform: scale(1);
+        transition: all 0.5s;
+    }
+}
+
+.p-incard {
+    width: max-content;
+    padding: 5px 10px;
+    background-color: #1f1d52;
+    color: #fff;
+}
