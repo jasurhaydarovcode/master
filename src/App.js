@@ -4,7 +4,6 @@ import Navbar from './Component/Navbar';
 import Head from './pages/Head';
 import './pages/portfolio/style.css'
 import SectionFirst from './pages/About';
-import Portfolio from './pages/portfolio';
 
 function App() {
   const [cursorPos, setCursorPos] = useState({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
@@ -54,9 +53,8 @@ function App() {
       <div className='relative w-full'>
         <SectionFirst />
       </div>
-      <div>
-        <Portfolio />
-      </div>
+
+      
       {/* Kursor */}
       <div
         className="cursor-blob"
