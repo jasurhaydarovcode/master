@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './App.css'; // Bu yerda sizning CSS uslublaringiz
 import Navbar from './Component/Navbar';
 import Head from './pages/Head';
+import './pages/portfolio/style.css'
 import SectionFirst from './pages/About';
+import Portfolio from './pages/portfolio';
 
 function App() {
   const [cursorPos, setCursorPos] = useState({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
@@ -42,7 +44,7 @@ function App() {
 
   return (
     <div
-      className="app-container relative w-full min-h-screen overflow-hidden"
+      className="app-container relative w-full h-max overflow-hidden"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ cursor: 'crosshair' }} // Sistemaning kursorini yashirish
@@ -51,6 +53,9 @@ function App() {
       <Head />
       <div className='relative w-full'>
         <SectionFirst />
+      </div>
+      <div>
+        <Portfolio />
       </div>
       {/* Kursor */}
       <div
