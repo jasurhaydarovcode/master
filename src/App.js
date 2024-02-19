@@ -1,6 +1,5 @@
 import './App.css'
 import Home from './components/Home'
-import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Contacts from './components/Contacts'
 import React, { useState, useEffect } from 'react';
@@ -58,7 +57,6 @@ function App() {
         {/* <NavBar /> */}
         <Home />
         <SectionFirst />
-        <Skills />
         <Projects />
         <Contacts />
       </main>

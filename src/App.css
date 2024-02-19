@@ -212,7 +212,7 @@ section.skills{
 }
 section.projects{
     & .title{
-        margin-top: 100px;
+        margin-top: 0px;
         text-align: center;
         font-size: 5vw;
         font-family: 'MuseoModerno', system-ui;
@@ -234,7 +234,7 @@ section.projects{
             gap: 20px;
             & .images{
                 background-image: linear-gradient(
-                    -45deg, #473bb4, #be24a9
+                    -45deg, #473bb4, #3800fb
                 );
                 padding: 40px;
                 text-align: center;
