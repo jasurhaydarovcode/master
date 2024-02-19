@@ -5,6 +5,7 @@ import Projects from './components/Projects'
 import Contacts from './components/Contacts'
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/new pages/Component/Navbar'
+import SectionFirst from './components/new pages/pages/About'
 
 
 function App() {
@@ -51,14 +52,17 @@ function App() {
       style={{ cursor: 'crosshair' }} // Sistemaning kursorini yashirish
     >
       <Navbar />
-      {/* <Head /> */}
-      <div className='relative w-full'>
-        {/* <SectionFirst /> */}
-      </div>
-      
-
-      
       {/* Kursor */}
+
+      <main>
+        {/* <NavBar /> */}
+        <Home />
+        <SectionFirst />
+        <Skills />
+        <Projects />
+        <Contacts />
+      </main>
+      {/* Cursor */}
       <div
         className="cursor-blob"
         style={{
@@ -73,15 +77,8 @@ function App() {
           mixBlendMode: 'difference' // Orqadagi rangga aks ta'sir qilish uslubi
         }}
       />
-      <main>
-      {/* <NavBar /> */}
-      <Home />
-      <Skills />
-      <Projects />
-      <Contacts />
-    </main>
     </div>
-   
+
   );
 }
 

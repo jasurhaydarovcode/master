@@ -13,7 +13,7 @@
     align-items: center;
     width: 100%;
     min-height: 700px;
-    background: #070a29;
+    background: transparent;
 }
 
 .section1 {
@@ -31,9 +31,9 @@
 .section1 span {
     position: relative;
     display: block;
-    width: calc(5vw - 2px);
-    height: calc(5vw - 2px);
-    background: #070a29;
+    width: calc(4vw - 2px);
+    height: calc(4vw - 2px);
+    background: transparent;
     border: 0px solid #1f1d52;
     z-index: 2;
     transition: 1.5s;
@@ -171,6 +171,6 @@
 .p-incard {
     width: max-content;
     padding: 5px 10px;
-    background-color: #1f1d52;
+    background-color: transparent;
     color: #fff;
 }

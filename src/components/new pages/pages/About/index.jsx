@@ -282,7 +282,7 @@ function SectionFirst() {
 
                 <div class="signin headshadow4">
                     <div className="text-center text-white">
-                        <h1 className=" text-8xl mb-5 mt-0-lg">About me</h1>
+                        <h1 className=" text-8xl mb-5 mt-0-lg">My Skills</h1>
                     </div>
                     <div className="in-sign">
                         <div className="w-10/12 pl=5">
