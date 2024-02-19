@@ -5,7 +5,7 @@ import "./style.css"
 function Head() {
     return (
         <>
-            <div class="globe">
+            <div class="globe felx flex-row">
                 <div className="left text-white py-44 px-10">
                     <div class=" text-white mt-10">
                         <h1 class="text-6xl font-bold text-white">
