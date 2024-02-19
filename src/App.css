@@ -79,21 +79,11 @@ section{
     width: 1300px;
     max-width: 100%;
     margin: auto;
-    padding: 50px;
     box-sizing: border-box;
     top: 0;
 }
-/* .delay-02{
-    animation-delay: 0.2s!important;
-}
-.delay-04{
-    animation-delay: 0.4s!important;
-}
-.delay-06{
-    animation-delay: 0.6s!important;
-} */
+
 section.home{
-    padding-top: 150px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
@@ -103,11 +93,11 @@ section.home{
     & .content{
         font-family: 'MuseoModerno', system-ui;
         & .name{
-            font-size: 7em;
+            font-size: 6em;
             font-weight: bold;
             line-height: 1em;
             & span{
-                background-image: linear-gradient(to right, #7BE728, #F3265F, #7F40AC, #7BE728);
+                background-image: linear-gradient(to right, #3800fb, #b61a46, #7F40AC, #3800fb);
                 background-size: 200% auto;
                 -webkit-text-fill-color: transparent;
                 -webkit-background-clip: text;

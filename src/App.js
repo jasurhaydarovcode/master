@@ -3,7 +3,6 @@ import Home from './components/Home'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Contacts from './components/Contacts'
-import Head from './components/new pages/pages/Head'
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/new pages/Component/Navbar'
 
@@ -76,7 +75,6 @@ function App() {
       />
       <main>
       {/* <NavBar /> */}
-      <Head/>
       <Home />
       <Skills />
       <Projects />
