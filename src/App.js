@@ -3,8 +3,8 @@ import Home from './components/Home'
 import Projects from './components/Projects'
 import Contacts from './components/Contacts'
 import React, { useState, useEffect } from 'react';
-import Navbar from './components/new pages/Component/Navbar'
-import SectionFirst from './components/new pages/pages/About'
+import Skils from './components/skils';
+import NavBar from './components/NavBar';
 
 
 function App() {
@@ -50,13 +50,12 @@ function App() {
       onMouseLeave={handleMouseLeave}
       style={{ cursor: 'crosshair' }} // Sistemaning kursorini yashirish
     >
-      <Navbar />
       {/* Kursor */}
 
+        <NavBar />  
       <main>
-        {/* <NavBar /> */}
         <Home />
-        <SectionFirst />
+        <Skils />
         <Projects />
         <Contacts />
       </main>

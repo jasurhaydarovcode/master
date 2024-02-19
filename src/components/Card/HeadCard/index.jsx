@@ -1,5 +1,5 @@
 import "./style.css"
-import "../../../GlobalCss/style.css"
+import "../../../css/GlobalCss/style.css"
 import SocialCard from "../socialcard";
     
 

@@ -1,12 +1,12 @@
-import "./style.css"
-import "../../GlobalCss/style.css"
+import "../css/about.css"
+import "../css/GlobalCss/style.css"
 import React from "react";
-import reactlogo from "../../Assets/react.png"
-import bootstrap from "../../Assets/bootstrap.png"
-import javascript from "../../Assets/javascript.png"
-import sass from "../../Assets/sass.png"
-import tailwind from "../../Assets/tailwind-css.png"
-function SectionFirst() {
+import reactlogo from "../Assets/skils/react.png"
+import bootstrap from "../Assets/skils/bootstrap.png"
+import javascript from "../Assets/skils/javascript.png"
+import sass from "../Assets/skils/sass.png"
+import tailwind from "../Assets/skils/tailwind-css.png"
+function Skils() {
 
     const data = [
         { image: reactlogo, text: 'React JS' },
@@ -309,4 +309,4 @@ function SectionFirst() {
     );
 }
 
-export default SectionFirst;
+export default Skils;
