@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPersonCircleQuestion, faEarthAmericas } from '@fortawesome/free-solid-svg-icons';
 import CustomHook from './CustomHook';
+import Project1 from "../Assets/projects/Reactideas.png"
 
 function Projects() {
   const [listProjects] = useState([
@@ -10,7 +11,7 @@ function Projects() {
       des: 'Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.',
       mission: 'Back-end Developer, system analysis and design',
       language: 'HTML5, CSS3, React JS, SockerIO,...',
-      images: '/project1.PNG'
+      images: Project1,
     },
     {
       name: 'Project Real-time chating in website',
@@ -37,7 +38,6 @@ function Projects() {
         My Projects
       </div>
       <div className="des" ref={(el) => el && divs.current.push(el)}>
-        {/* 20 */}
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam perspiciatis quae veniam amet nesciunt voluptatibus quis consectetur consequatur quisquam harum.
       </div>
       <div className="list">
