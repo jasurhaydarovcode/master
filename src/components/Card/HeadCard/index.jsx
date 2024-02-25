@@ -12,10 +12,10 @@ function Globecard() {
                     <SocialCard />
                 </div>
                 <a className="and2" href="https://t.me/Abdulaziz_saidov">
-                    <div className="bg-white rounded-2xl flex items-center p-2 w-64 cardd ">
+                    <div className=" rounded-2xl flex items-center p-2 w-64 cardd ">
                         <i class="fa-brands fa-instagram rounded-full w-12 h-12 mr-3 text-5xl"></i>
                         <div >
-                            <div className="font-semibold text-sm">Abdul Aziz</div>
+                            <div className="font-semibold text-sm text-start">Abdul Aziz</div>
                             <div className="text-xs text-gray-500">@abdulazizsaidov_</div>
                         </div>
                     </div>

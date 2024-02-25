@@ -90,6 +90,7 @@
     .head {
         height: 60vh;
     }
+
     .and {
         bottom: 100px !important;
         left: 3vw !important;
@@ -100,22 +101,27 @@
         right: 3vw !important;
         bottom: 100px !important;
     }
+
     .headcard {
         top: 5%;
         left: 40%;
     }
+
     .absolute-card1 {
         top: 5%;
         left: 40%;
     }
+
     .absolute-card2 {
         top: 5%;
         left: 40%;
     }
+
     .absolute-card3 {
         top: 5%;
         left: 40%;
     }
+
     .absolute-card4 {
         top: 5%;
         left: 40%;
@@ -127,7 +133,7 @@
     left: -1vw;
     bottom: 35%;
     position: absolute;
-    
+    box-shadow:  0 0 calc(1 * 6em)  hsl(260 97% 61% / 0.75)
 }
 
 .and2 {
@@ -135,7 +141,7 @@
     right: -1vw;
     bottom: 65%;
     position: absolute;
-    
+    box-shadow:  0 0 calc(1 * 6em)  hsl(260 97% 61% / 0.75)
 }
 
 .and:hover {
