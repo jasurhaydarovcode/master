@@ -61,7 +61,7 @@ function App() {
       </main>
       {/* Cursor */}
       <div
-        className="cursor-blob"
+        className="cursor-blob md:block hidden"
         style={{
           position: 'fixed', // Kursor har doim oynaning bir joyida turishini ta'minlash
           left: `${cursorPos.x}px`,
