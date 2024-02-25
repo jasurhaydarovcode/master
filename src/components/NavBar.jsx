@@ -17,7 +17,7 @@ const NavBar = ({activeTab}) => {
         toggleNav();
     }
     return (
-        <header>
+        <header className="bg-transparent">
             <div className="logo">
                 <img src="/logo.png" alt=""/> Portfolio
             </div>
