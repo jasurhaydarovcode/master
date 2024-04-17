@@ -9,12 +9,40 @@
   <meta name="description" content="Web site created using create-react-app" />
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <title>Abdulaziz Saidov</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    #root {
+      width: 100vw;
+      height: 100vh;
+      border: 1px solid black;
+      background-color: transparent;
+      z-index: 100000;
+      position: absolute;
+      overflow-y: auto;
+    }
+    body::before {
+      pointer-events: all !important;
+    }
+  </style>
+  <title>React App</title>
 </head>
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
+  <div>
+    <div id="root"></div>
+  </div>
+
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/three.js/r71/three.min.js'></script>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/stats.js/r11/Stats.min.js'></script>
+  <script src="./index.js"></script>
 </body>
 
 </html>

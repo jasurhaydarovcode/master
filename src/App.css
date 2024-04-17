@@ -16,28 +16,23 @@
 
 /* general styles */
 
-body{
+body {
     margin: 0;
     font-family: Poppins;
     background-color: #010824;
     color: #eee;
     font-size: 15px;
     min-height: 100vh;
-    background-image: linear-gradient(
-        to right, transparent 0 49px, #eee1 49px
-    ),
-    linear-gradient(
-        to bottom, transparent 0 49px, #eee1 49px
-    );
+    background-image: linear-gradient(to right, transparent 0 49px, #eee1 49px),
+        linear-gradient(to bottom, transparent 0 49px, #eee1 49px);
     background-size: 50px 50px;
-    &::before{
+
+    &::before {
         position: fixed;
         width: 400px;
         height: 200px;
         content: '';
-        background-image: linear-gradient(
-            to right, #23d037, #160795
-        );
+        background-image: linear-gradient(to right, #23d037, #160795);
         z-index: -1;
         top: -200px;
         left: calc(50% - 200px);
@@ -46,14 +41,15 @@ body{
         filter: blur(250px);
     }
 }
-main{
+
+main {
     width: 1300px;
     max-width: 100%;
     margin: auto;
 }
 
 
-section{
+section {
     width: 1300px;
     max-width: 100%;
     margin: auto;
@@ -63,13 +59,14 @@ section{
 
 
 /* animation */
-.animation{
+.animation {
     transform: translateY(50px);
     filter: blur(20px);
     opacity: 0;
     transition: 0.5s;
 }
-.animation.active{
+
+.animation.active {
     opacity: 1;
     filter: blur(0);
     transform: translateY(0);
@@ -77,18 +74,17 @@ section{
 
 
 
-  
-  .cursor-blob {
+
+.cursor-blob {
     animation: blob 10s infinite;
-    background: radial-gradient(circle closest-side, transparent, transparent, #6330fe );
+    background: radial-gradient(circle closest-side, transparent, transparent, #6330fe);
     width: 100px;
     height: 100px;
     position: absolute;
     mix-Blend-Mode: 'multiply';
     cursor: pointer !important;
-    /* pointer-Events: 'none'; */
+    pointer-Events: 'none';
     transform: 'translate(-50%, -50%)';
     z-Index: 9999;
     cursor: pointer;
-  }
-  
+}

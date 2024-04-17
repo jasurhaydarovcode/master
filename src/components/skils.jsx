@@ -17,7 +17,7 @@ function Skils() {
         // ... boshqa ma'lumotlar
     ];
     return (
-        <div className="head1">
+        <div className="head1 bg-slate-500">
             <div className="section1">
                 <span></span>
                 <span></span>
