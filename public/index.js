@@ -1,3 +1,8 @@
+document.addEventListener('DOMContentLoaded', function () {
+    let box = document.getElementById('box');
+    console.log(box);
+});
+
 (function () {
     "use strict";
     // 'To actually be able to display anything with Three.js, we need three things:
@@ -75,6 +80,7 @@
 
         container = document.createElement("div");
         document.body.appendChild(container);
+        container.style.position = "fixed"
         document.body.style.margin = 0;
         document.body.style.overflow = "hidden";
 
@@ -82,7 +88,7 @@
 
         particleCount = 20000; /* Leagues under the sea */
 
-        
+
 
         for (i = 0; i < particleCount; i++) {
             var vertex = new THREE.Vector3();
@@ -93,7 +99,7 @@
             geometry.vertices.push(vertex);
         }
 
-        
+
 
         parameters = [
             [[1, 1, 0.5], 5],
@@ -104,7 +110,7 @@
         ];
         parameterCount = parameters.length;
 
-       
+
 
         for (i = 0; i < parameterCount; i++) {
             color = parameters[i][0];
@@ -123,7 +129,7 @@
             scene.add(particles);
         }
 
-        
+
 
         renderer = new THREE.WebGLRenderer(); /*	Rendererererers particles.	*/
         renderer.setPixelRatio(
@@ -135,9 +141,9 @@
             renderer.domElement
         ); /* Let's add all this crazy junk to the page.	*/
 
-        
+
         stats = new Stats();
-        stats.domElement.style.position = "absolute";
+        stats.domElement.style.position = "fixed";
         stats.domElement.style.top = "0px";
         stats.domElement.style.right = "0px";
         container.appendChild(stats.domElement);
