@@ -1,7 +1,6 @@
-document.addEventListener('DOMContentLoaded', function () {
-    let box = document.getElementById('box');
-    console.log(box);
-});
+
+
+
 
 (function () {
     "use strict";
@@ -225,3 +224,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 })();
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(function () {
+        let box = document.getElementById('box');
+        console.log(box.clientTop);
+
+    }, 2000)
+});
