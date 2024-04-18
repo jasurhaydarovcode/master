@@ -1,12 +1,14 @@
 import "../css/about.css"
 import "../css/GlobalCss/style.css"
-import React from "react";
+import React, { useEffect, useState } from "react";
 import reactlogo from "../Assets/skils/react.png"
 import bootstrap from "../Assets/skils/bootstrap.png"
 import javascript from "../Assets/skils/javascript.png"
 import sass from "../Assets/skils/sass.png"
 import tailwind from "../Assets/skils/tailwind-css.png"
 function Skils() {
+
+
 
     const data = [
         { image: reactlogo, text: 'React JS' },
@@ -16,6 +18,7 @@ function Skils() {
         { image: tailwind, text: 'Tailwind css' },
         // ... boshqa ma'lumotlar
     ];
+    
     return (
         <div className="flex justify-center items-center min-h-screen bg-transparent bg-slate-500 ">
             <div className="absolute w-full h-[700px] flex justify-center items-center gap-2 flex-wrap overflow-hidden ">
@@ -38,7 +41,7 @@ function Skils() {
                                 </div>
                             ))}
                             <div className="App">
-                                
+
                             </div>
                         </div>
                     </div>

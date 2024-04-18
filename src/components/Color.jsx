@@ -1,5 +1,5 @@
 import Stats from 'three/examples/jsm/libs/stats.module.js'; // stats.min.js dosyasını doğrudan içe aktarıyoruz
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import * as THREE from 'three';
 
 const ThreeJsScene = () => {
@@ -19,9 +19,40 @@ const ThreeJsScene = () => {
     const parameterCount = useRef(0);
     const parameters = useRef([]);
 
+    const [textColor, setTextColor] = useState('black');
+    const [size, setSize] = useState(200);
+
+    // ---------- scroll position ---------- //
+    useEffect(() => {
+
+    }, []);
+
     useEffect(() => {
         init();
         animate();
+
+        const handleColorChange = () => {
+            const scrollPosition = window.scrollY;
+            if (scrollPosition < 500) {
+                setSize(20)
+                setTextColor('text-white');
+            } else if (scrollPosition < 1000) {
+                setSize(200)
+                setTextColor('text-black');
+            } else if (scrollPosition < 1500) {
+                setSize(2000)
+                setTextColor('text-red-600');
+            } else if (scrollPosition < 2000) {
+                setSize(20)
+                setTextColor('white');
+            }
+        };
+
+        window.addEventListener('scroll', handleColorChange);
+        return () => {
+            init();
+            return window.removeEventListener('scroll', handleColorChange)
+        };
 
         function init() {
             scene.current = new THREE.Scene();
@@ -38,7 +69,7 @@ const ThreeJsScene = () => {
             const positions = [];
             for (let i = 0; i < particleCount; i++) {
                 positions.push(Math.random() * 2000 - 1000);
-                positions.push(Math.random() * 2000 - 1000);
+                positions.push(Math.random() * size - 1000);
                 positions.push(Math.random() * 2000 - 1000);
             }
             geometry.current.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
@@ -120,7 +151,7 @@ const ThreeJsScene = () => {
         };
     }, []);
 
-    return <div ref={containerRef}  className='w-full fixed top-0 left-0 -z-10'/>;
+    return <div ref={containerRef} className='w-full fixed top-0 left-0 -z-10' />;
 };
 
 export default ThreeJsScene;

@@ -12,6 +12,7 @@ function App() {
   const [cursorPos, setCursorPos] = useState({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
   const [targetPos, setTargetPos] = useState({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
 
+  
   useEffect(() => {
     // Kursorning yangi pozitsiyasini hisoblash
     const moveCursor = () => {
