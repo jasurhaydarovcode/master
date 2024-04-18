@@ -5,6 +5,7 @@ import Contacts from './components/Contacts'
 import React, { useState, useEffect } from 'react';
 import Skils from './components/skils';
 import NavBar from './components/NavBar';
+import Cubanimation from './components/cubanimation';
 
 
 function App() {
@@ -52,7 +53,7 @@ function App() {
     >
       {/* Kursor */}
 
-        <NavBar />  
+      <NavBar />
       <main>
         <Home />
         <Skils />
@@ -74,6 +75,9 @@ function App() {
           mixBlendMode: 'difference' // Orqadagi rangga aks ta'sir qilish uslubi
         }}
       />
+
+      {/* cube amination */}
+      <Cubanimation />
     </div>
 
   );
