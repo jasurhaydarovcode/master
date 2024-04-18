@@ -1,6 +1,6 @@
-import Stats from 'three/examples/jsm/libs/stats.module.js'; // stats.min.js dosyasını doğrudan içe aktarıyoruz
 import React, { useRef, useEffect, useState } from 'react';
 import * as THREE from 'three';
+import Stats from 'three/examples/jsm/libs/stats.module.js';
 
 const ThreeJsScene = () => {
     const containerRef = useRef(null);
@@ -20,25 +20,28 @@ const ThreeJsScene = () => {
     const parameters = useRef([]);
 
     const [textColor, setTextColor] = useState('black');
-    const [size, setSize] = useState(200);
+    const [size, setSize] = useState(1500);
+    const [scrollPosition, setScrollPosition] = useState(window.scrollY);
 
-    // ---------- scroll position ---------- //
     useEffect(() => {
+        const handleScroll = () => {
+            setScrollPosition(window.scrollY);
+        };
 
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
 
-    useEffect(() => {
-        init();
-        animate();
+    
 
+    useEffect(() => {
         const handleColorChange = () => {
-            const scrollPosition = window.scrollY;
             if (scrollPosition < 500) {
                 setSize(20)
-                setTextColor('text-white');
             } else if (scrollPosition < 1000) {
                 setSize(200)
-                setTextColor('text-black');
             } else if (scrollPosition < 1500) {
                 setSize(2000)
                 setTextColor('text-red-600');
@@ -48,10 +51,18 @@ const ThreeJsScene = () => {
             }
         };
 
-        window.addEventListener('scroll', handleColorChange);
+        handleColorChange();
+    }, [scrollPosition]);
+
+
+
+    useEffect(() => {
+        init();
+        animate();
+
+
         return () => {
             init();
-            return window.removeEventListener('scroll', handleColorChange)
         };
 
         function init() {
@@ -69,7 +80,7 @@ const ThreeJsScene = () => {
             const positions = [];
             for (let i = 0; i < particleCount; i++) {
                 positions.push(Math.random() * 2000 - 1000);
-                positions.push(Math.random() * size - 1000);
+                positions.push(Math.random() * 2000 - 1000);
                 positions.push(Math.random() * 2000 - 1000);
             }
             geometry.current.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
@@ -151,7 +162,7 @@ const ThreeJsScene = () => {
         };
     }, []);
 
-    return <div ref={containerRef} className='w-full fixed top-0 left-0 -z-10' />;
+    return <div ref={containerRef} className={`w-full fixed top-0 left-0 -z-10 ${textColor}`} />;
 };
 
 export default ThreeJsScene;
