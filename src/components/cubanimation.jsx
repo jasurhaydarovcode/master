@@ -1,11 +1,11 @@
 import React from 'react'
-import "../css/about.css"
+import "../css/cubanimation.css"
 import "../css/GlobalCss/style.css"
 
 const Cubanimation = () => {
     return (
         <div className='section1'>
-            <div className="fixed top-0 flex flex-wrap">
+            <div className="fixed top-0 flex flex-wrap -z-0">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -415,7 +415,8 @@ const Cubanimation = () => {
                 <span></span>
                 <span></span>
                 <span></span>
-            </div></div>
+            </div>
+        </div>
     )
 }
 

@@ -11,33 +11,9 @@
 
 
 
-.section1 div span {
-    position: relative;
-    display: block;
-    width: calc(4vw - 2px);
-    height: calc(4vw - 2px);
-    background: transparent;
-    border: 0px solid #1f1d52;
-    border-radius: 50%;
-    z-index: 2;
-    transition: 1.5s;
-}
 
-.section1 div span:hover {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    box-shadow: -5px -5px 15px #1f1d52,
-        5px 5px 15px rgba(0, 0, 0, 0.35);
-    background: #1f1d52;
-    transition: 0s;
-}
 
 @media (max-width: 990px) {
-    .section1 span {
-        width: calc(1vw - 2px);
-        height: calc(1vw - 2px);
-    }
-
     .signin {
         width: 90vw;
     }
@@ -88,12 +64,7 @@
     }
 }
 
-@media (max-width: 600px) {
-    .section1 div span {
-        width: calc(5vw - 2px);
-        height: calc(5vw - 2px);
-    }
-}
+
 @media (max-width: 500px) {
     .signin {
         margin-top: 150px;

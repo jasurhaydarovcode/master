@@ -38,7 +38,7 @@ function Skils() {
                                 </div>
                             ))}
                             <div className="App">
-
+                                
                             </div>
                         </div>
                     </div>
