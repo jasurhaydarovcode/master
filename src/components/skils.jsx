@@ -27,7 +27,7 @@ function Skils() {
                         <h1 className=" text-8xl mb-5 mt-0-lg">My Skills</h1>
                     </div>
                     <div className="in-sign">
-                        <div className="w-10/12 pl=5">
+                        <div className="w-10/12 pr-5">
                             <h1></h1>
                             <p>I am an experienced Frontend Developer, adept in building custom software and websites from the ground up using Javascript, React, Vue js Node js.</p>
                         </div>
