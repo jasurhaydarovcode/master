@@ -1,0 +1,46 @@
+
+.link-btn {
+  position: absolute;
+  overflow: hidden;
+  background: #42455a6a;
+  width: 120px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  color: #e0ffff;
+  font-weight: 500;
+  cursor: pointer;
+  z-index: 99;
+}
+.link-btn:active{
+  transform: scale(0.95);
+}
+.link-btn::before{
+  content: '';
+  position: absolute;
+  inset: -1px 10px;
+  background: #5100cb64;
+  transition: 500ms;
+  animation: rotate 4s linear infinite;
+  z-index: -99;
+}
+.link-btn:hover::before{
+  inset: -1px;
+}
+.link-btn::after{
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border-radius: 10px;
+  background: #22232e5a;
+  z-index: -99;
+}
+@keyframes rotate {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}

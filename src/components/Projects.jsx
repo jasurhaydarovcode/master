@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPersonCircleQuestion, faEarthAmericas } from '@fortawesome/free-solid-svg-icons';
 import CustomHook from './CustomHook';
 import Project1 from "../Assets/projects/Reactideas.png"
+import LinkBtn from './buttons/link';
 
 function Projects() {
   const [listProjects] = useState([
@@ -43,9 +44,9 @@ function Projects() {
       <div className="list mt-14">
         {
           listProjects.map((value, key) => (
-            <div className='item  grid grid-cols-2 justify-between items-center mb-24 gap-20' key={key} ref={(el) => el && divs.current.push(el)}>
+            <div className='h-max grid grid-cols-2 justify-between items-center mb-24 gap-20' key={key} ref={(el) => el && divs.current.push(el)}>
               <div className="col-start-2 col-end-3 bg-gradient-to-tr from-[#1808ae87] to-[#3600fb68] p-10 text-center rounded-xl overflow-hidden">
-                <img className='h-[400px] rounded-xl shadow-md' src={value.images} alt="projects rasmlari" />
+                <img className='h-[300px] rounded-xl shadow-md' src={value.images} alt="projects rasmlari" />
               </div>
               <div className="col-start-1 col-end-2 row-start-1">
                 <h3 className='text-5xl m-0'>{value.name}</h3>
@@ -62,6 +63,11 @@ function Projects() {
                   <div>
                     <h4>Languages</h4>
                     <div className="">{value.language}</div>
+                  </div>
+                </div>
+                <div className="grid grid-cols-[70px,1fr] items-center gap-3 mt-3">
+                  <div className='relative z-40'>
+                    <LinkBtn />
                   </div>
                 </div>
               </div>
