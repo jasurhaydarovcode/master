@@ -1,4 +1,3 @@
-import "../css/about.css"
 import "../css/GlobalCss/style.css"
 import React, { useEffect, useState } from "react";
 import reactlogo from "../Assets/skils/react.png"
