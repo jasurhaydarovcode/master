@@ -4,6 +4,7 @@ import { faPersonCircleQuestion, faEarthAmericas } from '@fortawesome/free-solid
 import CustomHook from './CustomHook';
 import Project1 from "../Assets/projects/Reactideas.png"
 import LinkBtn from './buttons/link';
+import Tegs from './tegs';
 
 function Projects() {
   const [listProjects] = useState([
@@ -35,11 +36,14 @@ function Projects() {
   CustomHook(scrollTab, divs);
   return (
     <section className='z-50' ref={scrollTab}>
-      <div className="font-museo-moderno font-system mt-0 text-center text-[5vw]" ref={(el) => el && divs.current.push(el)}>
-        My Projects
+      <div className="font-museo-moderno font-system mt-0 mb-10 text-center text-[5vw] flex justify-center items-end" ref={(el) => el && divs.current.push(el)}>
+        <Tegs teg={"h1"} ><p>My Projects</p></Tegs>
       </div>
-      <div className=" text-center max-w-[500px] m-auto" ref={(el) => el && divs.current.push(el)}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam perspiciatis quae veniam amet nesciunt voluptatibus quis consectetur consequatur quisquam harum.
+
+      <div className=" text-center max-w-[500px] m-auto flex justify-center items-end" ref={(el) => el && divs.current.push(el)}>
+        <Tegs teg={"p"}>
+          <p className='px-3'>Lorem ipsum dolor sit amet.</p>
+        </Tegs>
       </div>
       <div className="list mt-14">
         {
@@ -49,8 +53,12 @@ function Projects() {
                 <img className='h-[300px] rounded-xl shadow-md' src={value.images} alt="projects rasmlari" />
               </div>
               <div className="col-start-1 col-end-2 row-start-1">
-                <h3 className='text-5xl m-0'>{value.name}</h3>
-                <div className="text-left w-full text-white mt-5">{value.des}</div>
+                <Tegs teg={"h2"} row={true}>
+                  <h3 className='text-5xl m-0'>{value.name}</h3>
+                </Tegs>
+                <Tegs teg={"p"} row={true}>
+                  <p className="text-left w-full text-white mt-5">{value.des}</p>
+                </Tegs>
                 <div className=" grid grid-cols-[70px,1fr] items-center gap-3 mt-3">
                   <div className='bg-[#cccccc54] w-14 h-14 text-xl flex justify-center items-center rounded-md'><FontAwesomeIcon icon={faPersonCircleQuestion} /></div>
                   <div>

@@ -1,18 +1,7 @@
 section.contacts {
     padding-bottom: 220px;
 
-    & .title {
-        text-align: center;
-        font-size: 5vw;
-        font-family: 'MuseoModerno', system-ui;
-    }
-
-    & .des {
-        color: #eee5;
-        text-align: center;
-        max-width: 500px;
-        margin: auto;
-    }
+    
 
     & .list {
         text-align: center;
