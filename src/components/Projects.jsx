@@ -48,9 +48,9 @@ function Projects() {
       <div className="list mt-14">
         {
           listProjects.map((value, key) => (
-            <div className='h-max grid grid-cols-2 justify-between items-center mb-24 gap-20' key={key} ref={(el) => el && divs.current.push(el)}>
+            <div className='h-max grid grid-cols-2 justify-between items-center mb-56 gap-20' key={key} ref={(el) => el && divs.current.push(el)}>
               <div className="col-start-2 col-end-3 bg-gradient-to-tr from-[#1808ae87] to-[#3600fb68] p-10 text-center rounded-xl overflow-hidden">
-                <img className='h-[300px] rounded-xl shadow-md' src={value.images} alt="projects rasmlari" />
+                <img className='h-[400px] rounded-xl shadow-md' src={value.images} alt="projects rasmlari" />
               </div>
               <div className="col-start-1 col-end-2 row-start-1">
                 <Tegs teg={"h2"} row={true}>
