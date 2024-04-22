@@ -78,6 +78,12 @@
     z-index: 2;
     padding: 40px;
     border-radius: 4px;
+    border: 2px solid transparent;
+    transition: border .5s;
+}
+
+.signin:hover {
+    border-color: #6330fe;
 }
 
 

@@ -17,13 +17,15 @@ function Skils() {
         { image: tailwind, text: 'Tailwind css' },
         // ... boshqa ma'lumotlar
     ];
-    
+
     return (
         <div className="flex justify-center items-center min-h-screen bg-transparent bg-slate-500 ">
             <div className="absolute w-full h-[700px] flex justify-center items-center gap-2 flex-wrap overflow-hidden ">
-                <div class="signin headshadow4">
-                    <div className="text-center text-white">
-                        <h1 className=" text-8xl mb-5 mt-0-lg">My Skills</h1>
+                <div class="signin headshadow__fourth">
+                    <div className="text-center text-white flex justify-center items-end">
+                        <p className="text-lg">&#60; h1 &#62;</p>
+                        <h1 className=" text-8xl mb-5 mt-0-lg"> My Skills </h1>
+                        <p className="text-lg">&#60; h1 &#62;</p>
                     </div>
                     <div className="in-sign">
                         <div className="w-10/12 pr-5">
