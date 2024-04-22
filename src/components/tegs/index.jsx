@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-const Tegs = () => {
+const Tegs = ({ teg, children }) => {
+    const TagName = teg;
     return (
-        <div>index</div>
-    )
+        <TagName>{children}</TagName>
+    );
 }
 
-export default Tegs
+export default Tegs;
