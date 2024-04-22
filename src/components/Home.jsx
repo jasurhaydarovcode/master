@@ -1,9 +1,8 @@
 import React, { useRef } from 'react'
 import CustomHook from './CustomHook';
-import Globecard from './Card/HeadCard';
 import Btnfirst from './buttons/First';
-import ColorChangingMaterials from './Color';
 import Tegs from './tegs';
+import ThreeJsScene from './Prackricle-bg';
 function Home() {
     const scrollTab = useRef();
     CustomHook(scrollTab);
@@ -27,7 +26,7 @@ function Home() {
             </div>
             <div className="avatar">
                 {/* <Globecard/> */}
-                <ColorChangingMaterials />
+                {/* <ThreeJsScene /> */}
             </div>
         </section>
     )
