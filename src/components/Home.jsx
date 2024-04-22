@@ -11,7 +11,7 @@ function Home() {
     return (
         <section ref={scrollTab} className='grid grid-cols-2 gap-10 justify-between items-center h-[600px] relative '>
             <div className=" font-museo-moderno font-system">
-                <div className="name text-6xl font-bold leading-tight">
+                <div className="name text-6xl font-bold leading-tight mb-10">
                     <Tegs teg={"h1"}>
                         <span className='pl-8'>I AM </span><span className='text-anim text-7xl'>Abdul Aziz</span>
                     </Tegs>
@@ -21,7 +21,7 @@ function Home() {
                         I'M Web developer
                     </p>
                 </Tegs>
-                <div className=''>
+                <div className='mt-10'>
                     <Btnfirst />
                 </div>
             </div>
