@@ -41,8 +41,13 @@
 :root {
   --transition: 0.3s;
 }
+
 .salom {
   padding: auto;
   max-width: 1px;
   margin: 1px;
+}
+
+.text-shadow__second {
+  text-shadow: 2px 2px 10px #6330fe , 2px 2px 10px #6330fe;
 }

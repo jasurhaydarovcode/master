@@ -4,7 +4,7 @@ const Tegs = ({ teg, children }) => {
     const TagName = teg;
     return (
         <>
-            <p className="text-2xl text-[#7b3bfcbf]">&#60; {teg} &#62;</p>{children}<p className="text-2xl text-[#7b3bfcbf]">&#60; / {teg} &#62;</p>
+            <p className="text-2xl text-[#7b3bfcbf] text-shadow__second">&#60; {teg} &#62;</p>{children}<p className="text-2xl text-[#7b3bfcbf] text-shadow__second">&#60; / {teg} &#62;</p>
         </>
     );
 }
