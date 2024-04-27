@@ -3,7 +3,7 @@ import "./style.css"
 function Btnfirst({ text = "btn", link = "#" }) {
     return (
         <a href={link} target="_blank">
-            <button class="btn rel generall__border">
+            <button class="btn rel ">
                 <span class="text">Text</span>
                 <span class="flip-front">{text}</span>
                 <span class="flip-back">

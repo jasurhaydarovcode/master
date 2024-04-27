@@ -46,7 +46,8 @@ a {
 .flip-back {
   color: #fff;
   background-color: #001495;
-  border: 2px solid #001495;
+  border: 2px #001495;
+  border-style: dotted double dashed double;
   display: flex;
   justify-content: center;
   align-items: center;
