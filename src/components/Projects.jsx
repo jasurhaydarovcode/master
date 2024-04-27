@@ -73,8 +73,10 @@ function Projects() {
                 </div>
                 <div className="grid grid-cols-[70px,1fr] items-center gap-3 mt-10">
                   
-                  <div >
+                  <div className='flex gap-3'>
                     <Btnfirst text='github'/>
+                    <Btnfirst text='live'/>
+                    <Btnfirst text='view more'/>
                   </div>
                 </div>
               </div>
