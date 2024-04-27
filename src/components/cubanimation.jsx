@@ -4,8 +4,15 @@ import "../css/GlobalCss/style.css"
 
 const Cubanimation = () => {
     return (
-        <div className='section1'>
-            <div className="fixed top-0 flex flex-wrap -z-0">
+        <div className='cube__container'>
+            <div className="fixed cub-grid top-0  -z-0">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
