@@ -37,7 +37,7 @@ function Projects() {
   return (
     <section>
       <div className='w-full generall__border py-5'>
-        <div className='w-max generall__border mx-auto'>
+        <div className='w-max generall__border mx-auto py-5'>
           <div className="font-museo-moderno font-system mt-0 mb-10 text-center text-[5vw] flex justify-center items-end" >
             <Tegs teg={"h1"} className=""><p>My Projects</p></Tegs>
           </div>
