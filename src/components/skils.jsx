@@ -19,9 +19,9 @@ function Skils() {
     ];
 
     return (
-        <section className=" mx-auto flex justify-center items-center min-h-screen bg-transparent generall__border mb-10">
+        <section className=" mx-auto flex justify-center items-center min-h-screen h-max bg-transparent generall__border mb-10">
             <div className="absolute w-full h-[700px] flex justify-center items-center gap-2 flex-wrap overflow-hidden ">
-                <div class="signin headshadow__fourth generall__border">
+                <div class="skills generall__border">
                     <div className="text-center text-white flex justify-center items-end">
                         <Tegs teg={"h1"}>
                             <h1 className=" text-8xl mb-5 mt-0-lg"> My Skills </h1>
@@ -35,7 +35,7 @@ function Skils() {
                         </div>
                         <div className="flex justify-between items-center w-full flex-wrap">
                             {data.map((item, index) => (
-                                <div className="sign-card mb-2 generall__border" key={index}>
+                                <div className="skills__card mb-2 generall__border" id="skills" key={index}>
                                     <div className="">
                                         <img src={item.image} alt="react js logo" />
                                     </div>
