@@ -14,17 +14,17 @@
 
 
 /* general styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    margin: 0;
-    font-family: Poppins;
     background-color: #010824;
     color: #eee;
     font-size: 15px;
     min-height: 100vh;
-    /* background-image: linear-gradient(to right, transparent 0 49px, #eee1 49px),
-        linear-gradient(to bottom, transparent 0 49px, #eee1 49px); */
-    background-size: 50px 50px;
 
     &::before {
         position: fixed;
@@ -42,18 +42,12 @@ body {
 
 
 
-main {
-    width: 1300px;
-    max-width: 100%;
-    margin: auto;
-}
 
 
 section {
     width: 1300px;
     max-width: 100%;
     margin: auto;
-    box-sizing: border-box;
     top: 0;
 }
 
