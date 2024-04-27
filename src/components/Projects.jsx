@@ -61,36 +61,38 @@ function Projects() {
               </div>
 
               <div className="col-start-1 col-end-2 row-start-1">
+                <div className='generall__border p-4'>
 
-                <div className='p-5 generall__border mb-3'>
-                  <Tegs teg={"h2"} row={true}>
-                    <h3 className='text-5xl m-0'>{value.name}</h3>
-                    <p className="text-left w-full text-white mt-5">{value.des}</p>
-                  </Tegs>
-                </div>
+                  <div className='p-5 generall__border mb-3'>
+                    <Tegs teg={"h2"} row={true}>
+                      <h3 className='text-5xl m-0'>{value.name}</h3>
+                      <p className="text-left w-full text-white mt-5">{value.des}</p>
+                    </Tegs>
+                  </div>
 
-                <div className='p-5 generall__border'>
-                  <div className="rel grid grid-cols-[70px,1fr] items-center gap-3 ">
-                    <div className='bg-[#cccccc54] w-14 h-14 text-xl flex justify-center items-center rounded-md'><FontAwesomeIcon icon={faPersonCircleQuestion} /></div>
-                    <div>
-                      <h4>Mission</h4>
-                      <div className="">{value.mission}</div>
+                  <div className='p-5 generall__border'>
+                    <div className="rel grid grid-cols-[70px,1fr] items-center gap-3 ">
+                      <div className='bg-[#cccccc54] w-14 h-14 text-xl flex justify-center items-center rounded-md'><FontAwesomeIcon icon={faPersonCircleQuestion} /></div>
+                      <div>
+                        <h4>Mission</h4>
+                        <div className="">{value.mission}</div>
+                      </div>
+                    </div>
+                    <div className="rel grid grid-cols-[70px,1fr] items-center gap-3 mt-3">
+                      <div className='bg-[#cccccc54] w-14 h-14 text-xl flex justify-center items-center rounded-md'><FontAwesomeIcon icon={faEarthAmericas} /></div>
+                      <div>
+                        <h4>Languages</h4>
+                        <div className="">{value.language}</div>
+                      </div>
                     </div>
                   </div>
-                  <div className="rel grid grid-cols-[70px,1fr] items-center gap-3 mt-3">
-                    <div className='bg-[#cccccc54] w-14 h-14 text-xl flex justify-center items-center rounded-md'><FontAwesomeIcon icon={faEarthAmericas} /></div>
-                    <div>
-                      <h4>Languages</h4>
-                      <div className="">{value.language}</div>
-                    </div>
-                  </div>
-                </div>
-                <div className="grid grid-cols-[70px,1fr] items-center gap-3 mt-10">
+                  <div className="grid grid-cols-[70px,1fr] items-center gap-3 mt-10">
 
-                  <div className='flex gap-3'>
-                    <Btnfirst text='github' link='https://github.com/abdulazizsaidovcode' />
-                    <Btnfirst text='live' />
-                    <Btnfirst text='view more' />
+                    <div className='flex gap-3'>
+                      <Btnfirst text='github' link='https://github.com/abdulazizsaidovcode' />
+                      <Btnfirst text='live' />
+                      <Btnfirst text='view more' />
+                    </div>
                   </div>
                 </div>
               </div>
