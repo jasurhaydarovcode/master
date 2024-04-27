@@ -35,7 +35,7 @@ function Skils() {
                         </div>
                         <div className="flex justify-between items-center w-full flex-wrap">
                             {data.map((item, index) => (
-                                <div className="sign-card mb-2" key={index}>
+                                <div className="sign-card mb-2 generall__border" key={index}>
                                     <div className="">
                                         <img src={item.image} alt="react js logo" />
                                     </div>

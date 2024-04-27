@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Quicksand', sans-serif;
-}
+
 
 
 
@@ -25,7 +20,7 @@
         border-radius: 15px;
         transition: all .5s;
         border: 2px solid #1f18e2;
-        border-radius: 50%;
+        border-radius: 50% !important;
     }
 }
 
@@ -37,7 +32,7 @@
         border-radius: 15px;
         transition: all .5s;
         border: 2px solid #1f18e2;
-        border-radius: 50%;
+        border-radius: 50% !important;
 
         .p-incard {
             transform: scale(1);
