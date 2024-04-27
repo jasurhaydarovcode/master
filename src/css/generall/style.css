@@ -43,3 +43,15 @@ span,
   z-index: 2;
 
 }
+
+.generall__border {
+  border: 3px solid #160795;
+  border-radius: 10px;
+  transition: all 1s;
+}
+.generall__border:hover {
+  border: 3px #160795;
+  border-style:  dotted double dashed double;
+  border-radius: 20px;
+  border-spacing: 100;
+}

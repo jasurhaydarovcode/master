@@ -6,6 +6,7 @@ import Project1 from "../Assets/projects/Reactideas.png"
 import LinkBtn from './buttons/link';
 import Tegs from './tegs';
 import Btnfirst from './buttons/First';
+import { div } from 'three/examples/jsm/nodes/Nodes.js';
 function Projects() {
   const [listProjects] = useState([
     {
@@ -35,48 +36,61 @@ function Projects() {
 
   return (
     <section>
-      <div className="font-museo-moderno font-system mt-0 mb-10 text-center text-[5vw] flex justify-center items-end" >
-        <Tegs teg={"h1"} className=""><p>My Projects</p></Tegs>
-      </div>
+      <div className='w-full generall__border py-5'>
+        <div className='w-max generall__border mx-auto'>
+          <div className="font-museo-moderno font-system mt-0 mb-10 text-center text-[5vw] flex justify-center items-end" >
+            <Tegs teg={"h1"} className=""><p>My Projects</p></Tegs>
+          </div>
 
-      <div className=" text-center max-w-[500px] m-auto flex justify-center items-end" >
-        <Tegs teg={"p"}>
-          <p className='px-3'>Lorem ipsum dolor sit amet.</p>
-        </Tegs>
+          <div className=" text-center max-w-[500px] m-auto flex justify-center items-end" >
+            <Tegs teg={"p"}>
+              <p className='px-3'>Lorem ipsum dolor sit amet.</p>
+            </Tegs>
+          </div>
+        </div>
       </div>
-      <div className="list mt-14">
+      <div className="list mt-14 ">
         {
           listProjects.map((value, key) => (
-            <div className='h-max grid grid-cols-2 justify-between items-center mb-56 gap-20' key={key} >
-              <div className="rel col-start-2 col-end-3 bg-gradient-to-tr from-[#100e2887] to-[#3600fb68] p-10 text-center rounded-xl overflow-hidden">
-                <img className='h-[400px] rounded-xl shadow-md' src={value.images} alt="projects rasmlari" />
-              </div>
-              <div className="col-start-1 col-end-2 row-start-1">
-                <Tegs teg={"h2"} row={true}>
-                  <h3 className='text-5xl m-0'>{value.name}</h3>
-                  <p className="text-left w-full text-white mt-5">{value.des}</p>
-                </Tegs>
+            <div className='h-max grid grid-cols-2 justify-between  mb-56 gap-20 ' key={key} >
 
-                <div className="rel grid grid-cols-[70px,1fr] items-center gap-3 mt-10">
-                  <div className='bg-[#cccccc54] w-14 h-14 text-xl flex justify-center items-center rounded-md'><FontAwesomeIcon icon={faPersonCircleQuestion} /></div>
-                  <div>
-                    <h4>Mission</h4>
-                    <div className="">{value.mission}</div>
-                  </div>
+              <div className='generall__border p-4 flex items-center'>
+                <div className=" rel col-start-2 col-end-3 bg-gradient-to-tr from-[#100e2887] to-[#3600fb68] p-10 text-center rounded-xl overflow-hidden h-full w-full">
+                  <img className='h-[400px] rounded-xl shadow-md' src={value.images} alt="projects rasmlari" />
                 </div>
-                <div className="rel grid grid-cols-[70px,1fr] items-center gap-3 mt-3">
-                  <div className='bg-[#cccccc54] w-14 h-14 text-xl flex justify-center items-center rounded-md'><FontAwesomeIcon icon={faEarthAmericas} /></div>
-                  <div>
-                    <h4>Languages</h4>
-                    <div className="">{value.language}</div>
+              </div>
+
+              <div className="col-start-1 col-end-2 row-start-1">
+
+                <div className='p-5 generall__border mb-3'>
+                  <Tegs teg={"h2"} row={true}>
+                    <h3 className='text-5xl m-0'>{value.name}</h3>
+                    <p className="text-left w-full text-white mt-5">{value.des}</p>
+                  </Tegs>
+                </div>
+
+                <div className='p-5 generall__border'>
+                  <div className="rel grid grid-cols-[70px,1fr] items-center gap-3 ">
+                    <div className='bg-[#cccccc54] w-14 h-14 text-xl flex justify-center items-center rounded-md'><FontAwesomeIcon icon={faPersonCircleQuestion} /></div>
+                    <div>
+                      <h4>Mission</h4>
+                      <div className="">{value.mission}</div>
+                    </div>
+                  </div>
+                  <div className="rel grid grid-cols-[70px,1fr] items-center gap-3 mt-3">
+                    <div className='bg-[#cccccc54] w-14 h-14 text-xl flex justify-center items-center rounded-md'><FontAwesomeIcon icon={faEarthAmericas} /></div>
+                    <div>
+                      <h4>Languages</h4>
+                      <div className="">{value.language}</div>
+                    </div>
                   </div>
                 </div>
                 <div className="grid grid-cols-[70px,1fr] items-center gap-3 mt-10">
-                  
+
                   <div className='flex gap-3'>
-                    <Btnfirst text='github'/>
-                    <Btnfirst text='live'/>
-                    <Btnfirst text='view more'/>
+                    <Btnfirst text='github' link='https://github.com/abdulazizsaidovcode' />
+                    <Btnfirst text='live' />
+                    <Btnfirst text='view more' />
                   </div>
                 </div>
               </div>
