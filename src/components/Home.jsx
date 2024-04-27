@@ -1,8 +1,6 @@
 import React, { useRef } from 'react'
 import CustomHook from './CustomHook';
-import Btnfirst from './buttons/First';
 import Tegs from './tegs';
-import ThreeJsScene from './Prackricle-bg';
 function Home() {
     const scrollTab = useRef();
     CustomHook(scrollTab);
@@ -21,7 +19,6 @@ function Home() {
                     </p>
                 </Tegs>
                 <div className='mt-10'>
-                    <Btnfirst />
                 </div>
             </div>
             <div className="avatar">
