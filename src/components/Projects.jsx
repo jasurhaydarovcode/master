@@ -5,7 +5,6 @@ import CustomHook from './CustomHook';
 import Project1 from "../Assets/projects/Reactideas.png"
 import LinkBtn from './buttons/link';
 import Tegs from './tegs';
-
 function Projects() {
   const [listProjects] = useState([
     {
@@ -34,10 +33,11 @@ function Projects() {
   const divs = useRef([]);
   const scrollTab = useRef();
   CustomHook(scrollTab, divs);
+  
   return (
-    <section className='z-50' ref={scrollTab}>
+    <section ref={scrollTab}>
       <div className="font-museo-moderno font-system mt-0 mb-10 text-center text-[5vw] flex justify-center items-end" ref={(el) => el && divs.current.push(el)}>
-        <Tegs teg={"h1"} ><p>My Projects</p></Tegs>
+        <Tegs teg={"h1"} className=""><p>My Projects</p></Tegs>
       </div>
 
       <div className=" text-center max-w-[500px] m-auto flex justify-center items-end" ref={(el) => el && divs.current.push(el)}>
