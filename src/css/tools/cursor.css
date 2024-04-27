@@ -1,0 +1,13 @@
+.cursor-blob {
+    animation: blob 10s infinite;
+    background: radial-gradient(circle closest-side, transparent, transparent, #6330fe);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    mix-Blend-Mode: 'multiply';
+    cursor: pointer !important;
+    pointer-Events: 'none';
+    transform: 'translate(-50%, -50%)';
+    z-Index: 9999;
+    cursor: pointer;
+}

@@ -1,6 +1,4 @@
 import React from 'react'
-import "../css/cubanimation.css"
-import "../css/GlobalCss/style.css"
 
 const Cubanimation = () => {
     return (
