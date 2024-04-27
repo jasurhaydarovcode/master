@@ -12,7 +12,7 @@ function Home() {
             <div className=" font-museo-moderno font-system">
                 <div className="name text-6xl font-bold leading-tight mb-10">
                     <Tegs teg={"h1"}>
-                        <span className='pl-8'>I AM </span><span className='text-anim text-7xl'>Abdul Aziz</span>
+                        <span className='pl-8 '>I AM </span><span className='text-anim text-7xl'>Abdul Aziz</span>
                     </Tegs>
                 </div>
                 <Tegs teg={"p"}>

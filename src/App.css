@@ -14,37 +14,7 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: #010824;
-    color: #eee;
-    font-size: 15px;
-    min-height: 100vh;
 
-    &::before {
-        position: fixed;
-        width: 400px;
-        height: 200px;
-        content: '';
-        background-image: linear-gradient(to right, #23d037, #160795);
-        z-index: -1;
-        top: -200px;
-        left: calc(50% - 200px);
-        border-radius: 50% 50% 0% 0%;
-        filter: blur(250px);
-    }
-}
-
-
-
-
-
-section {
-    width: 1300px;
-    max-width: 100%;
-    margin: auto;
-    top: 0;
-    position: relative;
-}
 
 
 /* animation */

@@ -1,5 +1,4 @@
-import "../css/GlobalCss/style.css"
-import React, { useEffect, useState } from "react";
+import React from "react";
 import reactlogo from "../Assets/skils/react.png"
 import bootstrap from "../Assets/skils/bootstrap.png"
 import javascript from "../Assets/skils/javascript.png"
