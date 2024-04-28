@@ -15,23 +15,21 @@ function Contacts() {
       value: '@Abdulazizsaodov_'
     }
   ])
-  const divs = useRef([]);
-  const scrollTab = useRef();
-  CustomHook(scrollTab, divs);
+
 
   return (
-    <section className='contacts flex flex-col items-center' id='box' ref={scrollTab}>
-      <h1 className="text-center text-5xl font-museo-moderno font-sans flex justify-center items-end mb-7" ref={(el) => el && divs.current.push(el)}>
+    <section className='contacts flex flex-col items-center' id='box' >
+      <h1 className="text-center text-5xl font-museo-moderno font-sans flex justify-center items-end mb-7" >
         <Tegs teg={"h1"}>
           My Contacts
         </Tegs>
       </h1>
-      <h1 className="text-[#eee5] max-w-[700px] flex justify-end" ref={(el) => el && divs.current.push(el)}>
+      <h1 className="text-[#eee5] max-w-[700px] flex justify-end" >
         <Tegs teg={"p"}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam perspiciatis quae veniam amet nesciunt voluptatibus quis consectetur consequatur quisquam harum.
         </Tegs>
       </h1>
-      <div className="list" ref={(el) => el && divs.current.push(el)}>
+      <div className="list" >
         {
           listContacts.map((value, key) => (
             <div className='item' key={key}>

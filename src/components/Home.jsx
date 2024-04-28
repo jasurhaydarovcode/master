@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import CustomHook from './CustomHook';
 import Tegs from './tegs';
+import SocialCard from './Card/socialcard';
 function Home() {
     const scrollTab = useRef();
     CustomHook(scrollTab);
@@ -19,6 +20,8 @@ function Home() {
                     </p>
                 </Tegs>
                 <div className='mt-10'>
+                    <SocialCard />
+
                 </div>
             </div>
             <div className="avatar">

@@ -1,10 +1,19 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPersonCircleQuestion, faEarthAmericas } from '@fortawesome/free-solid-svg-icons';
 import Project1 from "../Assets/projects/Reactideas.png"
 import Tegs from './tegs';
 import Btnfirst from './buttons/First';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 function Projects() {
+  useEffect(() => {
+    AOS.init({
+      // Bu yerda sizning sozlamalaringiz, masalan:
+      duration: 1000,
+      once: false, // faqat bir marta animatsiyani ishga tushirish
+    });
+  }, []);
   const [listProjects] = useState([
     {
       name: 'Project Real-time chating in website',
@@ -35,6 +44,7 @@ function Projects() {
     <section>
       <div className='w-full generall__border py-5'>
         <div className='w-max generall__border mx-auto py-5'>
+
           <div className="font-museo-moderno font-system mt-0 mb-10 text-center text-[5vw] flex justify-center items-end" >
             <Tegs teg={"h1"} className=""><p>My Projects</p></Tegs>
           </div>
@@ -44,12 +54,18 @@ function Projects() {
               <p className='px-3'>Lorem ipsum dolor sit amet.</p>
             </Tegs>
           </div>
+
         </div>
       </div>
       <div className="list mt-14 ">
         {
           listProjects.map((value, key) => (
-            <div className='h-max grid lg:grid-cols-2 grid-cols-1 justify-between  md:mb-56 mb-20 lg:gap-16 md:gap-10 gap-5 ' key={key} >
+            <div
+              className='h-max grid lg:grid-cols-2 grid-cols-1 justify-between  md:mb-56 mb-20 lg:gap-16 md:gap-10 gap-5 '
+              key={key}
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-center"
+            >
 
               <div className='generall__border p-4 flex items-center'>
                 <div className=" rel col-start-2 col-end-3 bg-gradient-to-tr from-[#100e2887] to-[#3600fb68] md:p-10 p- text-center rounded-xl overflow-hidden h-full w-full">
@@ -68,6 +84,7 @@ function Projects() {
                   </div>
 
                   <div className='p-5 generall__border'>
+
                     <div className="rel grid grid-cols-[70px,1fr] items-center gap-3 ">
                       <div className='bg-[#cccccc54] w-14 h-14 text-xl flex justify-center items-center rounded-md'><FontAwesomeIcon icon={faPersonCircleQuestion} /></div>
                       <div>
@@ -75,6 +92,7 @@ function Projects() {
                         <div className="">{value.mission}</div>
                       </div>
                     </div>
+
                     <div className="rel grid grid-cols-[70px,1fr] items-center gap-3 mt-3">
                       <div className='bg-[#cccccc54] w-14 h-14 text-xl flex justify-center items-center rounded-md'><FontAwesomeIcon icon={faEarthAmericas} /></div>
                       <div>
@@ -82,6 +100,7 @@ function Projects() {
                         <div className="">{value.language}</div>
                       </div>
                     </div>
+
                   </div>
 
                   <div className=" mt-10">
@@ -91,6 +110,7 @@ function Projects() {
                       <Btnfirst text='live' />
                       <Btnfirst text='view more' />
                     </div>
+
                   </div>
                 </div>
               </div>
