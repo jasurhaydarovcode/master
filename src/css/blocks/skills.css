@@ -71,7 +71,7 @@
 }
 
 .skills:hover {
-    border-color: #6330fe;
+    border-color: var(--dynamic-color);
 }
 
 

@@ -20,34 +20,8 @@ const ThreeJsScene = () => {
     const stats = useRef(null);
     const parameterCount = useRef(0);
     const parameters = useRef([]);
-
-    const [size, setSize] = useState(1500);
-    const [scrollPosition, setScrollPosition] = useState(window.scrollY);
     const { setTextColor } = useColor();
 
-    // Ekranni ko'zdan kechirgan holda yorliqlarini eshitish va skroll pozitsiyasini yangilash
-
-    // Misol uchun skroll pozitsiyasiga bog'liq rangni o'zgartirish
-    
-
-
-
-    // Skroll pozitsiyasiga ko'ra rang va o'lcham o'zgarishlarini qo'llab-quvvatlash
-    useEffect(() => {
-        const handleColorChange = () => {
-            if (scrollPosition < 500) {
-                setSize(20);
-            } else if (scrollPosition < 1000) {
-                setSize(200);
-            } else if (scrollPosition < 1500) {
-                setSize(2000);
-            } else if (scrollPosition < 2000) {
-                setSize(20);
-            }
-        };
-
-        handleColorChange();
-    }, [scrollPosition]);
 
 
 
@@ -144,7 +118,7 @@ const ThreeJsScene = () => {
             let h = ((360 * (color[0] + time)) % 360) / 360;
             materials.current[i].color.setHSL(h, color[1], color[2]);
 
-            setTextColor(`hsl(${h * 360}, ${color[1] * 100}%, ${color[2] * 100}%)`)
+            setTextColor(`hsl(${h * 360}, ${color[1] * 100}%, ${color[2] * 90}%)`)
         }
 
         renderer.current.render(scene.current, camera.current);

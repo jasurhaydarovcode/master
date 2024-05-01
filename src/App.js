@@ -2,7 +2,7 @@ import './App.css'
 import Home from './components/Home'
 import Projects from './components/Projects'
 import Contacts from './components/Contacts'
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Skils from './components/skils';
 import NavBar from './components/NavBar';
 import Cubanimation from './components/cubanimation';
@@ -13,7 +13,11 @@ import { ColorProvider } from './provider/color';
 function App() {
   const [cursorPos, setCursorPos] = useState({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
   const [targetPos, setTargetPos] = useState({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
+  // const { textColor } = useContext(ColorProvider);
 
+  // useEffect(() => {
+  //   document.documentElement.style.setProperty('--dynamic-color', textColor);
+  // }, [textColor])
 
   useEffect(() => {
     // Kursorning yangi pozitsiyasini hisoblash
@@ -46,6 +50,8 @@ function App() {
     // Brauzer oynasidan chiqqanda kursor shaklini markazga qo'yish
     setTargetPos({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
   };
+
+  
 
   return (
     <div
@@ -84,7 +90,7 @@ function App() {
 
         {/* three js background */}
         <ThreeJsScene />
-        
+
       </ColorProvider>
     </div>
 

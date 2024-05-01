@@ -20,7 +20,6 @@ function Skils() {
     ];
 
     const { textColor } = useColor();
-
     
 
 
