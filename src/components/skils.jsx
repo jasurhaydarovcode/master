@@ -5,9 +5,10 @@ import javascript from "../Assets/skils/javascript.png"
 import sass from "../Assets/skils/sass.png"
 import tailwind from "../Assets/skils/tailwind-css.png"
 import Tegs from "./tegs";
+import Card from "./Card/3dCard";
 
 function Skils() {
-    
+
     const data = [
         { image: reactlogo, text: 'React JS' },
         { image: bootstrap, text: 'Bootstrap' },
@@ -16,12 +17,7 @@ function Skils() {
         { image: tailwind, text: 'Tailwind css' },
         // ... boshqa ma'lumotlar
     ];
-    let card = document.querySelector('.box');
-    document.addEventListener('mousemove', function (e) {
-        let xAxis = (window.innerWidth / 2 - e.pageX) / 50;
-        let yAxis = (window.innerHeight / 2 - e.pageY) / 25;
-        card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-    });
+
 
     return (
         <section className=" mx-auto flex justify-center items-center min-h-screen h-max bg-transparent generall__border mb-10">
@@ -32,16 +28,17 @@ function Skils() {
                             <h1 className=" text-8xl mb-5 mt-0-lg"> My Skills </h1>
                         </Tegs>
                     </div>
-                    <div className="in-sign">
+                    <div className="w-full p-20">
                         <div className="flex justify-between items-center w-full flex-wrap">
-                            {data.map((item, index) => (
-                                <div className="box skills__card mb-2 generall__border" id="skills" key={index}>
+                            {/* {data.map((item, index) => (
+                                <div className=" skills__card mb-2 generall__border" id="skills" key={index}>
                                     <div className="">
                                         <img src={item.image} alt="react js logo" />
                                     </div>
                                     <p className="p-incard text-center rounded-3xl">{item.text}</p>
                                 </div>
-                            ))}
+                            ))} */}
+                            <Card />
                             <div className="App">
 
                             </div>

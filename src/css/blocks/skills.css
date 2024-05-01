@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-
-
-
-
-
-
-
-
 @media (max-width: 990px) {
     .skills {
         width: 90vw;
@@ -84,14 +76,6 @@
 
 
 
-.in-sign {
-    display: flex;
-    color: aliceblue;
-    width: 100%;
-    padding: 40px;
-    border-radius: 4px;
-}
-
 .skills__card {
     width: 100px;
     height: 100px;
@@ -136,20 +120,3 @@
     color: #fff;
 }
 
-.box {
-    transform: translateZ(20px) !important;
-    transform-style: preserve-3d !important;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    
-    place-items: center;
-    flex-direction: column !important;
-}
-
-.box div img {
-    text-transform: uppercase !important;
-    transform: translateZ(50px) !important;
-}
