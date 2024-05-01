@@ -2,12 +2,13 @@ import React, { useRef } from 'react'
 import CustomHook from './CustomHook';
 import Tegs from './tegs';
 import SocialCard from './Card/socialcard';
+import img from '../Assets/me/hero-bg.svg';
 function Home() {
     const scrollTab = useRef();
     CustomHook(scrollTab);
 
     return (
-        <section ref={scrollTab} className='grid grid-cols-2 gap-10 justify-between items-center h-[600px] relative '>
+        <section ref={scrollTab} className='grid md:grid-cols-2 grid-cols-1 gap-10 justify-between items-center  h-max relative py-20'>
             <div className=" font-museo-moderno font-system">
                 <div className="name text-6xl font-bold leading-tight mb-10">
                     <Tegs teg={"h1"}>
@@ -21,12 +22,10 @@ function Home() {
                 </Tegs>
                 <div className='mt-10'>
                     <SocialCard />
-
                 </div>
             </div>
             <div className="avatar">
-                {/* <Globecard/> */}
-                {/* <ThreeJsScene /> */}
+                <img src={img} alt="" />
             </div>
         </section>
     )
