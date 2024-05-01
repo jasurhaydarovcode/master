@@ -5,6 +5,7 @@ import javascript from "../Assets/skils/javascript.png"
 import sass from "../Assets/skils/sass.png"
 import tailwind from "../Assets/skils/tailwind-css.png"
 import Tegs from "./tegs";
+
 function Skils() {
     
     const data = [
