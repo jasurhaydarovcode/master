@@ -6,13 +6,15 @@ import React, { useState, useEffect } from 'react';
 import Skils from './components/skils';
 import NavBar from './components/NavBar';
 import Cubanimation from './components/cubanimation';
+import ThreeJsScene from './components/Prackricle-bg';
+import { ColorProvider } from './provider/color';
 
 
 function App() {
   const [cursorPos, setCursorPos] = useState({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
   const [targetPos, setTargetPos] = useState({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
 
-  
+
   useEffect(() => {
     // Kursorning yangi pozitsiyasini hisoblash
     const moveCursor = () => {
@@ -52,33 +54,38 @@ function App() {
       onMouseLeave={handleMouseLeave}
       style={{ cursor: 'crosshair' }} // Sistemaning kursorini yashirish
     >
-      {/* Kursor */}
+      {/* colorProvider */}
+      <ColorProvider>
+        <NavBar />
+        <main>
+          <Home />
+          <Skils />
+          <Projects />
+          <Contacts />
+        </main>
+        {/* Cursor */}
+        <div
+          className="cursor-blob md:block hidden"
+          style={{
+            position: 'fixed', // Kursor har doim oynaning bir joyida turishini ta'minlash
+            left: `${cursorPos.x}px`,
+            top: `${cursorPos.y}px`,
+            width: '100px',
+            height: '100px',
+            transform: 'translate(-50%, -50%)', // Kursor shaklini o'rtaga qo'yish
+            pointerEvents: 'none', // Kursorning o'zi bilan interaktsiyani bloklash
+            borderRadius: '50%', // Kursorning shakli
+            mixBlendMode: 'difference' // Orqadagi rangga aks ta'sir qilish uslubi
+          }}
+        />
 
-      <NavBar />
-      <main>
-        <Home />
-        <Skils />
-        <Projects />
-        <Contacts />
-      </main>
-      {/* Cursor */}
-      <div
-        className="cursor-blob md:block hidden"
-        style={{
-          position: 'fixed', // Kursor har doim oynaning bir joyida turishini ta'minlash
-          left: `${cursorPos.x}px`,
-          top: `${cursorPos.y}px`,
-          width: '100px',
-          height: '100px',
-          transform: 'translate(-50%, -50%)', // Kursor shaklini o'rtaga qo'yish
-          pointerEvents: 'none', // Kursorning o'zi bilan interaktsiyani bloklash
-          borderRadius: '50%', // Kursorning shakli
-          mixBlendMode: 'difference' // Orqadagi rangga aks ta'sir qilish uslubi
-        }}
-      />
+        {/* cube amination */}
+        <Cubanimation />
 
-      {/* cube amination */}
-      <Cubanimation />
+        {/* three js background */}
+        <ThreeJsScene />
+        
+      </ColorProvider>
     </div>
 
   );

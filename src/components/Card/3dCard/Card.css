@@ -5,6 +5,7 @@
       padding: 1em;
       text-align: right;
       color: #181a1a;
+      background-color: rgba(2, 1, 65, 0.398);
 
       width: max-content;
       height: max-content;
@@ -15,7 +16,6 @@
 
       position: relative;
 
-      transition-duration: 300ms;
       transition-property: transform, box-shadow !important;
       transition-timing-function: ease-out;
       transform: rotate3d(0) !important;

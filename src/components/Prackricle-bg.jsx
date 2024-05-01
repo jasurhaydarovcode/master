@@ -1,6 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 import * as THREE from 'three';
 import Stats from 'three/examples/jsm/libs/stats.module.js';
+import { useColor } from '../provider/color';
+import { debounce } from 'lodash';
 
 const ThreeJsScene = () => {
     const containerRef = useRef(null);
@@ -19,42 +21,35 @@ const ThreeJsScene = () => {
     const parameterCount = useRef(0);
     const parameters = useRef([]);
 
-    const [textColor, setTextColor] = useState('black');
     const [size, setSize] = useState(1500);
     const [scrollPosition, setScrollPosition] = useState(window.scrollY);
+    const { setTextColor } = useColor();
 
     // Ekranni ko'zdan kechirgan holda yorliqlarini eshitish va skroll pozitsiyasini yangilash
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrollPosition(window.scrollY);
-        };
 
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    // Misol uchun skroll pozitsiyasiga bog'liq rangni o'zgartirish
+    
+
+
 
     // Skroll pozitsiyasiga ko'ra rang va o'lcham o'zgarishlarini qo'llab-quvvatlash
     useEffect(() => {
         const handleColorChange = () => {
             if (scrollPosition < 500) {
                 setSize(20);
-                setTextColor('black');
             } else if (scrollPosition < 1000) {
                 setSize(200);
-                setTextColor('black');
             } else if (scrollPosition < 1500) {
                 setSize(2000);
-                setTextColor('text-red-600');
             } else if (scrollPosition < 2000) {
                 setSize(20);
-                setTextColor('white');
             }
         };
 
         handleColorChange();
     }, [scrollPosition]);
+
+
 
     // Sahifani yuklaganda va o'lcham o'zgarishida WebGL sahifasini boshlash
     useEffect(() => {
@@ -105,9 +100,15 @@ const ThreeJsScene = () => {
             particles.current[i].rotation.x = Math.random() * 6;
             particles.current[i].rotation.y = Math.random() * 6;
             particles.current[i].rotation.z = Math.random() * 6;
-
+            console.log(materials.current[i]);
+            console.log(color[0], color[1], color[2]);
+            console.log(parameters.current[i][0]);
             scene.current.add(particles.current[i]);
+
+
+
         }
+
 
         stats.current = new Stats();
         containerRef.current.appendChild(stats.current.domElement);
@@ -142,6 +143,8 @@ const ThreeJsScene = () => {
             const color = parameters.current[i][0];
             let h = ((360 * (color[0] + time)) % 360) / 360;
             materials.current[i].color.setHSL(h, color[1], color[2]);
+
+            setTextColor(`hsl(${h * 360}, ${color[1] * 100}%, ${color[2] * 100}%)`)
         }
 
         renderer.current.render(scene.current, camera.current);
@@ -162,7 +165,7 @@ const ThreeJsScene = () => {
         renderer.current.setSize(window.innerWidth, window.innerHeight);
     }
 
-    return <div ref={containerRef} className={`w-full fixed top-0 left-0 -z-10 ${textColor}`} />;
+    return <div ref={containerRef} className={`w-full fixed top-0 left-0 -z-10`} />;
 };
 
 export default ThreeJsScene;
