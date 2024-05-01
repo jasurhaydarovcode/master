@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import CustomHook from './CustomHook';
 import Tegs from './tegs';
-import SocialCard from './Card/socialcard';
+import SocialCard from './Card/socialCard/socialcard';
 import img from '../Assets/me/hero-bg.svg';
 function Home() {
     const scrollTab = useRef();

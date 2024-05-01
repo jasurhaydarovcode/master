@@ -61,7 +61,7 @@ function Projects() {
         {
           listProjects.map((value, key) => (
             <div
-              className='h-max grid lg:grid-cols-2 grid-cols-1 justify-between  md:mb-56 mb-20 lg:gap-16 md:gap-10 gap-5 '
+              className='generall__border p-5  h-max grid lg:grid-cols-2 grid-cols-1 justify-between  md:mb-56 mb-20 lg:gap-16 md:gap-10 gap-5 '
               key={key}
               data-aos="fade-up"
               data-aos-anchor-placement="top-center"
