@@ -67,9 +67,9 @@ function Projects() {
               data-aos-anchor-placement="top-center"
             >
 
-              <div className='generall__border p-4 flex items-center'>
-                <div className=" rel col-start-2 col-end-3 bg-gradient-to-tr from-[#100e2887] to-[#3600fb68] md:p-10 p- text-center rounded-xl overflow-hidden h-full w-full">
-                  <img className='md:h-[400px] h-[200px] rounded-xl shadow-md' src={value.images} alt="projects rasmlari" />
+              <div className='generall__border p-4  flex justify-center items-center'>
+                <div className=" rel col-start-2 col-end-3 bg-gradient-to-tr from-[#100e2887] to-[#3600fb68] md:p-10 p- text-center rounded-xl overflow-hidden h-full w-ful ">
+                  <img className='md:h-[400px] h-[200px] rounded-xl shadow-md ' src={value.images} alt="projects rasmlari" />
                 </div>
               </div>
 

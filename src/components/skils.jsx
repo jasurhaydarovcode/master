@@ -6,9 +6,7 @@ import sass from "../Assets/skils/sass.png"
 import tailwind from "../Assets/skils/tailwind-css.png"
 import Tegs from "./tegs";
 function Skils() {
-
-
-
+    
     const data = [
         { image: reactlogo, text: 'React JS' },
         { image: bootstrap, text: 'Bootstrap' },
@@ -17,6 +15,12 @@ function Skils() {
         { image: tailwind, text: 'Tailwind css' },
         // ... boshqa ma'lumotlar
     ];
+    let card = document.querySelector('.box');
+    document.addEventListener('mousemove', function (e) {
+        let xAxis = (window.innerWidth / 2 - e.pageX) / 50;
+        let yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+        card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+    });
 
     return (
         <section className=" mx-auto flex justify-center items-center min-h-screen h-max bg-transparent generall__border mb-10">
@@ -28,14 +32,9 @@ function Skils() {
                         </Tegs>
                     </div>
                     <div className="in-sign">
-                        <div className="w-10/12 pr-5 ">
-                            <Tegs teg={"p"}>
-                                <p className="pl-8">I am an experienced Frontend Developer, adept in building custom software and websites from the ground up using Javascript, React, Vue js Node js.</p>
-                            </Tegs>
-                        </div>
                         <div className="flex justify-between items-center w-full flex-wrap">
                             {data.map((item, index) => (
-                                <div className="skills__card mb-2 generall__border" id="skills" key={index}>
+                                <div className="box skills__card mb-2 generall__border" id="skills" key={index}>
                                     <div className="">
                                         <img src={item.image} alt="react js logo" />
                                     </div>
