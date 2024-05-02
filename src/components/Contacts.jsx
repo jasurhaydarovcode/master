@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react'
-import CustomHook from './CustomHook';
 import Tegs from './tegs';
 
 function Contacts() {

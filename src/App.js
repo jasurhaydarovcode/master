@@ -11,6 +11,7 @@ import { ColorProvider } from './provider/color';
 
 
 function App() {
+  
   const [cursorPos, setCursorPos] = useState({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
   const [targetPos, setTargetPos] = useState({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
   // const { textColor } = useContext(ColorProvider);

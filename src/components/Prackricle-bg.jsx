@@ -1,8 +1,7 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 import Stats from 'three/examples/jsm/libs/stats.module.js';
 import { useColor } from '../provider/color';
-import { debounce } from 'lodash';
 
 const ThreeJsScene = () => {
     const containerRef = useRef(null);
