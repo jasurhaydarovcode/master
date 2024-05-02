@@ -20,16 +20,17 @@ function Skils() {
     ];
 
     const { textColor } = useColor();
-    
+
+    console.log(textColor);
 
 
     return (
-        <section className=" mx-auto flex justify-center items-center min-h-screen h-max bg-transparent generall__border mb-10">
+        <section className={` mx-auto flex justify-center items-center min-h-screen h-max bg-transparent generall__border border-[${textColor}] mb-10`}>
             <div className="absolute w-full h-[700px] flex justify-center items-center gap-2 flex-wrap overflow-hidden ">
                 <div class=" generall__border">
                     <div className="text-center text-white flex justify-center items-end">
                         <Tegs teg={"h1"}>
-                            <h1 className=" text-8xl mb-5 mt-0-lg" style={{ color: textColor }}> My Skills </h1>
+                            <h1 className=" text-8xl mb-5 mt-0-lg"> My Skills </h1>
                         </Tegs>
                     </div>
                     <div className="w-full p-20">

@@ -34,6 +34,47 @@ const ThreeJsScene = () => {
         };
     }, []);
 
+    function hslToRgb(h, s, l) {
+        s /= 100;
+        l /= 100;
+        let c = (1 - Math.abs(2 * l - 1)) * s;
+        let x = c * (1 - Math.abs((h / 60) % 2 - 1));
+        let m = l - c / 2;
+        let r = 0;
+        let g = 0;
+        let b = 0;
+
+        if (0 <= h && h < 60) {
+            r = c; g = x; b = 0;
+        } else if (60 <= h && h < 120) {
+            r = x; g = c; b = 0;
+        } else if (120 <= h && h < 180) {
+            r = 0; g = c; b = x;
+        } else if (180 <= h && h < 240) {
+            r = 0; g = x; b = c;
+        } else if (240 <= h && h < 300) {
+            r = x; g = 0; b = c;
+        } else if (300 <= h && h < 360) {
+            r = c; g = 0; b = x;
+        }
+        r = Math.round((r + m) * 255);
+        g = Math.round((g + m) * 255);
+        b = Math.round((b + m) * 255);
+
+        return [r, g, b];
+    }
+
+    function rgbToHex(r, g, b) {
+        const toHex = x => x.toString(16).padStart(2, '0');
+        return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
+    }
+
+    function hslToHex(h, s, l) {
+        const [r, g, b] = hslToRgb(h, s, l);
+        return rgbToHex(r, g, b);
+    }
+
+
     // WebGL sahifasini boshlash funksiyasi
     function init() {
         scene.current = new THREE.Scene();
@@ -100,26 +141,28 @@ const ThreeJsScene = () => {
     // Sahifani qayta tarqatish funksiyasi
     function render() {
         const time = Date.now() * 0.00005;
-
+    
         camera.current.position.x += (mouseX.current - camera.current.position.x) * 1.5;
         camera.current.position.y += (-mouseY.current - camera.current.position.y) * 0.05;
         camera.current.lookAt(scene.current.position);
-
+    
         for (let i = 0; i < scene.current.children.length; i++) {
             const object = scene.current.children[i];
             if (object instanceof THREE.Points) {
                 object.rotation.y = time * (i < 4 ? i + 1 : -(i + 1));
             }
         }
-
+    
         for (let i = 0; i < materials.current.length; i++) {
             const color = parameters.current[i][0];
             let h = ((360 * (color[0] + time)) % 360) / 360;
             materials.current[i].color.setHSL(h, color[1], color[2]);
-
-            setTextColor(`hsl(${h * 360}, ${color[1] * 100}%, ${color[2] * 90}%)`)
+    
+            // Rangni HSL dan HEX ga o'tkazish
+            const hexColor = hslToHex(h * 360, color[1] * 100, color[2] * 100);
+            setTextColor(hexColor);
         }
-
+    
         renderer.current.render(scene.current, camera.current);
     }
 
