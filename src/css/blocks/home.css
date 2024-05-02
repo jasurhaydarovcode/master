@@ -1,5 +1,5 @@
 .text-anim {
-    background-image: linear-gradient(to right, #3800fb, #7f1ab6c2, #3800fb, #7F40AC, #3800fb);
+    background-image: linear-gradient(to right, var(--dynamic-color), #7f1ab6c2, var(--dynamic-color), #7F40AC, var(--dynamic-color));
     background-size: 200% auto;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
