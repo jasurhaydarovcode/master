@@ -14,6 +14,7 @@ function Projects() {
       once: false, // faqat bir marta animatsiyani ishga tushirish
     });
   }, []);
+  
   const [listProjects] = useState([
     {
       name: 'Project Real-time chating in website',
