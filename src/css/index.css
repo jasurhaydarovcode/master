@@ -10,6 +10,7 @@
 @import url('./tools/cubanimation.css');
 @import url('./tools/shadows.css');
 @import url('./tools/cursor.css');
+@import url('./tools/checkbox.css');
 
 /* globall  */
 @import url("./generall/style.css");
@@ -17,4 +18,7 @@
 
 .dynamic-style {
     color: var(--dynamic-color);
+}
+.dynamic-style-bg {
+    background-color: var(--dynamic-color);
 }

@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
-    extend: {},
+    extend: {
+      backdropFilter: {
+        'blur': 'blur(10px)',
+      }
+    },
   },
-  plugins: [],
+  plugins: [
+  ],
 }
