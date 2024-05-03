@@ -21,7 +21,6 @@ function Skils() {
 
     const { textColor } = useColor();
 
-    console.log(textColor);
 
 
     return (

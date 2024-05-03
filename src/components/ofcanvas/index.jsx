@@ -5,6 +5,16 @@ function Modal({ children }) {
     const [isOpen, setIsOpen] = useState(false);
     const { textColor } = useColor()
 
+    let changingcolors = document.getElementById("changing-colors");
+    let threeBackground = document.getElementById("three-background");
+
+    // if (changingcolors.checked) sessionStorage.setItem("changing-colors", "true")
+    // else sessionStorage.setItem("changing-colors", "false");
+
+    // if (threeBackground.checked) sessionStorage.setItem("three-background", "true");
+    // else sessionStorage.setItem("three-background", "false");
+
+
 
     const toggleOffcanvas = () => setIsOpen(!isOpen);
 
@@ -12,6 +22,8 @@ function Modal({ children }) {
         if (e.key === "Escape") setIsOpen(false);
         if (e.key === "Escape" || e.type === "click") setIsOpen(false);
     })
+
+
 
     return (
         <>
@@ -57,9 +69,14 @@ function Modal({ children }) {
                                     <div className="absolute inset-0 py-6 px-4 sm:px-6 ">
                                         <div className="h-full border-2 border-dashed  p-3 generall__border" aria-hidden="true">
                                             <div>
-                                                <input type='checkbox' class='ios8-switch' id='checkbox-1' />
-                                                <label for='checkbox-1'>changign color</label>
+                                                <input type='checkbox' class='ios8-switch' id='changing-colors' />
+                                                <label for='changing-colors'>changing colors</label>
                                             </div>
+                                            <div>
+                                                <input type='checkbox' class='ios8-switch' id='three-background' />
+                                                <label for='three-background'>three background</label>
+                                            </div>
+                                            <input type="checkbox" id='chek' />
                                         </div>
                                     </div>
                                     {/* /End replace */}
