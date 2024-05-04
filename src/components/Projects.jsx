@@ -6,12 +6,14 @@ import Tegs from './tegs';
 import Btnfirst from './buttons/First';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import ParticleImage from './particle';
+import img from "./../Assets/a.jpeg"
 function Projects() {
   useEffect(() => {
     AOS.init({
       // Bu yerda sizning sozlamalaringiz, masalan:
       duration: 1000,
-      once: false, // faqat bir marta animatsiyani ishga tushirish
+      once: false, // faqat bir marta animatsiyani ishga tushirish 
     });
   }, []);
   
@@ -21,7 +23,7 @@ function Projects() {
       des: 'Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.',
       mission: 'Back-end Developer, system analysis and design',
       language: 'HTML5, CSS3, React JS, SockerIO,...',
-      images: Project1,
+      images: <ParticleImage img={img} tagId="my-particle-image"/>, 
     },
     {
       name: 'Project Real-time chating in website',
@@ -70,7 +72,8 @@ function Projects() {
 
               <div className='generall__border p-4  flex justify-center items-center'>
                 <div className=" rel col-start-2 col-end-3 bg-gradient-to-tr dynamic-style-bg to-[#3600fb68] md:p-10 p- text-center rounded-xl overflow-hidden h-full w-ful ">
-                  <img className='md:h-[400px] h-[200px] rounded-xl shadow-md ' src={value.images} alt="projects rasmlari" />
+                  {/* <img className='md:h-[400px] h-[200px] rounded-xl shadow-md ' src={value.images} alt="projects rasmlari" /> */}
+                  {value.images}
                 </div>
               </div>
 
