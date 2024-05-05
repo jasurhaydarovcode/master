@@ -45,12 +45,12 @@ span,
 }
 
 .generall__border {
-  border: 3px solid var(--dynamic-color);
+  border: 3px solid transparent;
   border-radius: 10px;
-  transition: border 0.3s ease, border-radius 0.3s ease;
+  transition: border 2s ease, border-radius 2s ease;
 }
 .generall__border:hover {
-  border: 3px var(--dynamic-color);
+  border: 3px #6230fe;
   border-style:  dotted double dashed double;
   animation: border-animation 5s infinite linear;
   border-radius: 20px;

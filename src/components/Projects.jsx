@@ -47,7 +47,7 @@ function Projects() {
       <div className='w-full generall__border py-5'>
         <div className='w-max generall__border mx-auto py-5'>
 
-          <div className="font-museo-moderno font-system mt-0 mb-10 text-center text-[5vw] flex justify-center items-end" >
+          <div className="font-museo-moderno font-system mt-0 mb-10 text-center text-[5vw] flex justify-center items-end px-10" >
             <p>My Projects</p>
           </div>
 
@@ -61,7 +61,7 @@ function Projects() {
         {
           listProjects.map((value, key) => (
             <div
-              className='generall__border p-5  h-max grid lg:grid-cols-2 grid-cols-1 justify-between  md:mb-56 mb-20 lg:gap-16 md:gap-10 gap-5 '
+              className=' p-5  h-max grid lg:grid-cols-2 grid-cols-1 justify-between  md:mb-56 mb-20 lg:gap-16 md:gap-10 gap-5 '
               key={key}
               data-aos="fade-up"
               data-aos-anchor-placement="top-center"
@@ -69,7 +69,6 @@ function Projects() {
 
               <div className='generall__border p-4  flex justify-center items-center'>
                 <div className=" rel col-start-2 col-end-3 bg-gradient-to-tr dynamic-style-bg to-[#3600fb68] md:p-10 p- text-center rounded-xl overflow-hidden h-full w-ful ">
-                  {/* <img className='md:h-[400px] h-[200px] rounded-xl shadow-md ' src={value.images} alt="projects rasmlari" /> */}
                   {value.images}
                 </div>
               </div>
