@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPersonCircleQuestion, faEarthAmericas } from '@fortawesome/free-solid-svg-icons';
 import Project1 from "../Assets/projects/Reactideas.png"
-import Tegs from './tegs';
 import Btnfirst from './buttons/First';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -16,14 +15,14 @@ function Projects() {
       once: false, // faqat bir marta animatsiyani ishga tushirish 
     });
   }, []);
-  
+
   const [listProjects] = useState([
     {
       name: 'Project Real-time chating in website',
       des: 'Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.',
       mission: 'Back-end Developer, system analysis and design',
       language: 'HTML5, CSS3, React JS, SockerIO,...',
-      images: <ParticleImage img={img} tagId="my-particle-image"/>, 
+      images: <ParticleImage img={img} tagId="my-particle-image" />,
     },
     {
       name: 'Project Real-time chating in website',
@@ -49,13 +48,11 @@ function Projects() {
         <div className='w-max generall__border mx-auto py-5'>
 
           <div className="font-museo-moderno font-system mt-0 mb-10 text-center text-[5vw] flex justify-center items-end" >
-            <Tegs teg={"h1"} className=""><p>My Projects</p></Tegs>
+            <p>My Projects</p>
           </div>
 
           <div className=" text-center max-w-[500px] m-auto flex justify-center items-end" >
-            <Tegs teg={"p"}>
-              <p className='px-3'>Lorem ipsum dolor sit amet.</p>
-            </Tegs>
+            <p className='px-3'>Lorem ipsum dolor sit amet.</p>
           </div>
 
         </div>
@@ -81,10 +78,8 @@ function Projects() {
                 <div className='generall__border p-4'>
 
                   <div className='md:p-5 p-3 generall__border mb-3'>
-                    <Tegs teg={"h2"} row={true}>
                       <h3 className='text-5xl m-0'>{value.name}</h3>
                       <p className="text-left w-full text-white mt-5">{value.des}</p>
-                    </Tegs>
                   </div>
 
                   <div className='p-5 generall__border'>
