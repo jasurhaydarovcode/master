@@ -14,9 +14,3 @@
 @import url("./generall/style.css");
 
 
-.dynamic-style {
-    color: var(--dynamic-color);
-}
-.dynamic-style-bg {
-    background-color: var(--dynamic-color);
-}

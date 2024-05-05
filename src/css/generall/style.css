@@ -47,7 +47,7 @@ span,
 .generall__border {
   border: 3px solid transparent;
   border-radius: 10px;
-  transition: border 2s ease, border-radius 2s ease;
+  transition: border 1s ease, border-radius 1s ease;
 }
 .generall__border:hover {
   border: 3px #6230fe;
