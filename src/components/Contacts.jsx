@@ -8,26 +8,20 @@ function Contacts() {
     }, {
       title: 'Email',
       value: 'abdulazizsaidovcode@gmail.com'
-    }, {
-      title: 'Instagram',
-      value: '@Abdulazizsaodov_'
     }
   ])
 
 
   return (
-    <section className='contacts flex flex-col items-center' id='box' >
-      <h1 className="text-center text-5xl font-museo-moderno font-sans flex justify-center items-end mb-7" >
+    <section className=' flex flex-col items-center py-36'  >
+      <h1 className="generall__border px-20 py-10 text-center text-5xl font-museo-moderno font-sans flex justify-center items-end mb-7" >
           My Contacts
       </h1>
-      <h1 className="text-[#eee5] max-w-[700px] flex justify-end" >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam perspiciatis quae veniam amet nesciunt voluptatibus quis consectetur consequatur quisquam harum.
-      </h1>
-      <div className="list" >
+      <div className=" flex py-10 gap-10" >
         {
           listContacts.map((value, key) => (
-            <div className='item' key={key}>
-              <h3>{value.title}</h3>
+            <div className='generall__border p-5' key={key}>
+              <h3 className='text-4xl'>{value.title}</h3>
               <div>{value.value}</div>
             </div>
           ))

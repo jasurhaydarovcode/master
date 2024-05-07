@@ -34,8 +34,8 @@ a {
 }
 
 .flip-front {
-    color: var(--dynamic-color);
-    border: 2px solid var(--dynamic-color);
+    color: #5b2aec;
+    border: 2px solid #5b2aec;
     background-color: transparent;
     -webkit-transform: rotateX(0deg) translateZ(25px);
     -ms-transform: rotateX(0deg) translateZ(25px);
@@ -45,8 +45,8 @@ a {
 
 .flip-back {
   color: #fff;
-  background-color: var(--dynamic-color);
-  border: 2px var(--dynamic-color);
+  background-color: #5b2aec;
+  border: 2px #5b2aec;
   border-style: dotted double dashed double;
   display: flex;
   justify-content: center;

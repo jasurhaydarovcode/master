@@ -1,12 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPersonCircleQuestion, faEarthAmericas } from '@fortawesome/free-solid-svg-icons';
-import Project1 from "../Assets/projects/Reactideas.png"
 import Btnfirst from './buttons/First';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import ParticleImage from './particle';
-import img from "./../Assets/a.jpeg"
+import pacman from "../Assets/projects/Pacman.png"
 function Projects() {
   useEffect(() => {
     AOS.init({
@@ -18,25 +16,13 @@ function Projects() {
 
   const [listProjects] = useState([
     {
-      name: 'Project Real-time chating in website',
-      des: 'Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.',
-      mission: 'Back-end Developer, system analysis and design',
-      language: 'HTML5, CSS3, React JS, SockerIO,...',
-      images: <ParticleImage img={img} tagId="my-particle-image" />,
-    },
-    {
-      name: 'Project Real-time chating in website',
-      des: 'Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.',
-      mission: 'Back-end Developer, system analysis and design',
-      language: 'HTML5, CSS3, React JS, SockerIO,...',
-      images: '/project2.PNG'
-    },
-    {
-      name: 'Project Real-time chating in website',
-      des: 'Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.',
-      mission: 'Back-end Developer, system analysis and design',
-      language: 'HTML5, CSS3, React JS, SockerIO,...',
-      images: '/project2.PNG'
+      name: 'Pacman',
+      des: "A Pac-Man game written in JavaScript (JS), an implementation of the JavaScript programming language to define a version of the classic arcade game to run in web browsers.",
+      mission: 'is a deep understanding of java scripting down to the basics',
+      language: 'HTML5, CSS3, Java Script,',
+      images: pacman,
+      link: 'https://abdulazizs-pacman.vercel.app/',
+      github: 'https://github.com/abdulazizsaidovcode/PACMAN'
     },
 
   ]);
@@ -47,7 +33,7 @@ function Projects() {
       <div className='w-full generall__border py-5'>
         <div className='w-max generall__border mx-auto py-5'>
 
-          <div className="font-museo-moderno font-system mt-0 mb-10 text-center text-[5vw] flex justify-center items-end px-10" >
+          <div className="font-museo-moderno font-system mt-0 mb-10 text-center text-[5vw] flex justify-center items-end px-36" >
             <p>My Projects</p>
           </div>
 
@@ -68,8 +54,8 @@ function Projects() {
             >
 
               <div className='generall__border p-4  flex justify-center items-center'>
-                <div className=" rel col-start-2 col-end-3 bg-gradient-to-tr dynamic-style-bg to-[#3600fb68] md:p-10 p- text-center rounded-xl overflow-hidden h-full w-ful ">
-                  {value.images}
+                <div className="generall__border rel col-start-2 col-end-3 bg-gradient-to-tr dynamic-style-bg to-[#3600fb68] md:p-10 p- text-center rounded-xl overflow-hidden h-full w-ful ">
+                  <img src={value.images} alt="rasm" className='w-full h-full rounded-xl hover:scale-105 transition-all' />
                 </div>
               </div>
 
@@ -77,8 +63,8 @@ function Projects() {
                 <div className='generall__border p-4'>
 
                   <div className='md:p-5 p-3 generall__border mb-3'>
-                      <h3 className='text-5xl m-0'>{value.name}</h3>
-                      <p className="text-left w-full text-white mt-5">{value.des}</p>
+                    <h3 className='text-5xl m-0'>{value.name}</h3>
+                    <p className="text-left w-full text-white mt-5">{value.des}</p>
                   </div>
 
                   <div className='p-5 generall__border'>
@@ -105,8 +91,8 @@ function Projects() {
 
                     <div className='flex gap-3 flex-wrap md:justify-start justify-center w-full'>
                       <Btnfirst text='github' link='https://github.com/abdulazizsaidovcode' />
-                      <Btnfirst text='live' />
-                      <Btnfirst text='view more' />
+                      <Btnfirst text='live' link={value.link}/>
+                      <Btnfirst text='view more' link={value.github} />
                     </div>
 
                   </div>
