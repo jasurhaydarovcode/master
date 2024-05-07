@@ -5,6 +5,7 @@ import Btnfirst from './buttons/First';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import pacman from "../Assets/projects/Pacman.png"
+import zlatmax from "../Assets/projects/zlatmax.png"
 function Projects() {
   useEffect(() => {
     AOS.init({
@@ -16,10 +17,19 @@ function Projects() {
 
   const [listProjects] = useState([
     {
+      name: 'ZlatMax',
+      des: "The online store 'ZLATMAX' presents products from famous Zlatoust knife manufacturers. All models do not belong to edged weapons, which is documented.",
+      mission: 'Zlatmax.It is an internet magazine with only parts made visible to the user,but only the appearance of this website is made. ',
+      language: 'HTML5, CSS3, Java Script',
+      images: zlatmax,
+      link: 'https://zlatmax-clone-abdulazizs.vercel.app/',
+      github: 'https://github.com/abdulazizsaidovcode/Zlatmax__clone'
+    },
+    {
       name: 'Pacman',
       des: "A Pac-Man game written in JavaScript (JS), an implementation of the JavaScript programming language to define a version of the classic arcade game to run in web browsers.",
       mission: 'is a deep understanding of java scripting down to the basics',
-      language: 'HTML5, CSS3, Java Script,',
+      language: 'HTML5, CSS3, Java Script',
       images: pacman,
       link: 'https://abdulazizs-pacman.vercel.app/',
       github: 'https://github.com/abdulazizsaidovcode/PACMAN'
@@ -91,7 +101,7 @@ function Projects() {
 
                     <div className='flex gap-3 flex-wrap md:justify-start justify-center w-full'>
                       <Btnfirst text='github' link='https://github.com/abdulazizsaidovcode' />
-                      <Btnfirst text='live' link={value.link}/>
+                      <Btnfirst text='live' link={value.link} />
                       <Btnfirst text='view more' link={value.github} />
                     </div>
 
