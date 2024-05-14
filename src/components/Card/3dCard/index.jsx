@@ -60,7 +60,7 @@ function Card() {
                 >
                     <div className='grow'>
                         <div className="skills__card mb-2 generall__border" id="skills">
-                            <div className="">
+                            <div className="flex">
                                 <img src={item.image} alt={`${item.text} logo`} />
                             </div>
                             <p className="p-incard text-center rounded-3xl">{item.text}</p>

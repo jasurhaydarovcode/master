@@ -13,6 +13,8 @@
         transition: all .5s;
         border: 2px solid #1f18e2;
         border-radius: 50% !important;
+        justify-content: center;
+
     }
 }
 
@@ -110,10 +112,10 @@
 }
 
 #skills {
-    transition: all 2s !important;
+    transition: all 1s !important;
 }
 #skills:hover {
-    transition: all 2s !important;
+    transition: all 1s !important;
     border-radius: 50% !important;
 }
 
