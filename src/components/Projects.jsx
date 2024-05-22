@@ -6,6 +6,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import pacman from "../Assets/projects/Pacman.png"
 import zlatmax from "../Assets/projects/zlatmax.png"
+import pch from "../Assets/projects/pch14.png"
+
 function Projects() {
   useEffect(() => {
     AOS.init({
@@ -16,6 +18,15 @@ function Projects() {
   }, []);
 
   const [listProjects] = useState([
+    {
+      name: 'Railway Plan',
+      des: "The Kashkadarya railway repair enterprise is a structural unit of the Karshi Regional Railway Junction branch enterprise. This enterprise is independently fully responsible for the results of its economic activity, in accordance with the law, before consumers, the state budget, the bank, and the enterprise team for the obligations received on the basis of mutually concluded contracts.",
+      mission: 'The goal of our website is to automate maintenance and manage it more efficiently. Facilitates planning, monitoring and reporting through this website. The main functions of the website consist of:',
+      language: 'Next Js (React) Typescript, Tailwind CSS',
+      images: pch,
+      link: 'https://pch14.uz/home',
+      github: 'https://github.com/SardorbekCoder07/Railway_z'
+    },
     {
       name: 'ZlatMax',
       des: "The online store 'ZLATMAX' presents products from famous Zlatoust knife manufacturers. All models do not belong to edged weapons, which is documented.",
@@ -65,7 +76,7 @@ function Projects() {
 
               <div className='generall__border md:p-4 p-2  flex justify-center items-center'>
                 <div className="generall__border rel col-start-2 col-end-3 bg-gradient-to-tr dynamic-style-bg to-[#3600fb68] md:p-10 p- text-center rounded-xl overflow-hidden h-full w-ful ">
-                  <img src={value.images} alt="rasm" className='w-full h-full rounded-xl hover:scale-105 transition-all' />
+                  <img src={value.images} alt="rasm" className='w-full h-full rounded-xl hover:scale-105 transition-all object-cover' />
                 </div>
               </div>
 
