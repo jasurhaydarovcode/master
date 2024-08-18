@@ -8,6 +8,7 @@ import NavBar from './components/NavBar';
 import Cubanimation from './components/cubanimation';
 import ThreeJsScene from './components/Prackricle-bg';
 import { ColorProvider, useColor } from './provider/color';
+import Link from './components/Link';
 
 
 function App() {
@@ -66,6 +67,7 @@ function App() {
       <NavBar />
       <main>
         <Home />
+        <Link />
         <Skils />
         <Projects />
         <Contacts />
