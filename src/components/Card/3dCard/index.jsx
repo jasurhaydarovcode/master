@@ -1,19 +1,8 @@
-import React, { useRef, useEffect, useState } from 'react';
-import reactlogo from "../../../Assets/skils/react.png"
-import bootstrap from "../../../Assets/skils/bootstrap.png"
-import javascript from "../../../Assets/skils/javascript.png"
-import sass from "../../../Assets/skils/sass.png"
-import tailwind from "../../../Assets/skils/tailwind-css.png"
+import React, { useEffect, useState } from 'react';
 import './Card.css'; // CSS fayllarini bu yerda import qiling
+import { skills } from '../../../data/skils';
 
-function Card() {
-    const [data, setData] = useState([
-        { image: reactlogo, text: 'React JS' },
-        { image: bootstrap, text: 'Bootstrap' },
-        { image: sass, text: 'Sass' },
-        { image: javascript, text: 'Java Script' },
-        { image: tailwind, text: 'Tailwind css' },
-    ]);
+function Card({ data }) {
     const [refs, setRefs] = useState([]);
 
     useEffect(() => {
@@ -61,7 +50,7 @@ function Card() {
                     <div className='grow'>
                         <div className="skills__card mb-2 generall__border" id="skills">
                             <div className="flex">
-                                <img src={item.image} alt={`${item.text} logo`} />
+                                {item.image && <img className='md:w-[120px] w-[100%] h-[100%]' src={item.image} alt={`${item.text} logo`} />}
                             </div>
                             <p className="p-incard text-center rounded-3xl">{item.text}</p>
                         </div>

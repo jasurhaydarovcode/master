@@ -1,4 +1,5 @@
 import React from "react";
+import Btnfirst from "./buttons/First";
 
 
 const NavBar = () => {
@@ -9,7 +10,7 @@ const NavBar = () => {
                     <img src="/logo.png" alt="" /> Portfolio
                 </div>
                 <div className="transition-all">
-                   
+                    <Btnfirst text='Download Cv' link={'/'} />
                 </div>
 
 
