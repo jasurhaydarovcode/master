@@ -1,11 +1,11 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPersonCircleQuestion, faEarthAmericas } from '@fortawesome/free-solid-svg-icons';
 import Btnfirst from './buttons/First';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import pacman from "../Assets/projects/Pacman.png"
-import zlatmax from "../Assets/projects/zlatmax.png"
+import qrpay from "../Assets/projects/qrpay.png"
 import pch from "../Assets/projects/pch14.png"
 
 function Projects() {
@@ -19,7 +19,18 @@ function Projects() {
 
   const [listProjects] = useState([
     {
+      name: 'CR - Pay',
+      type: 'game',
+      des: "Web Dashboard and Mobile application in ios and android",
+      mission: 'The goal of the project: an iOS and Android application and a website were created that allow customers to pay by converting foreign currency into Uzbek soums using a QR code.',
+      language: 'React Native for mobile , Vite reactJs bank integrations ',
+      images: qrpay,
+      link: 'http://qrpay.uz',
+      github: 'https://github.com/Alisher0903/qr-web'
+    },
+    {
       name: 'Railway Plan',
+      type: 'dashboard',
       des: "The Kashkadarya railway repair enterprise is a structural unit of the Karshi Regional Railway Junction branch enterprise. This enterprise is independently fully responsible for the results of its economic activity, in accordance with the law, before consumers, the state budget, the bank, and the enterprise team for the obligations received on the basis of mutually concluded contracts.",
       mission: 'The goal of our website is to automate maintenance and manage it more efficiently. Facilitates planning, monitoring and reporting through this website. The main functions of the website consist of:',
       language: 'Next Js (React) Typescript, Tailwind CSS',
@@ -28,16 +39,8 @@ function Projects() {
       github: 'https://github.com/SardorbekCoder07/Railway_z'
     },
     {
-      name: 'ZlatMax',
-      des: "The online store 'ZLATMAX' presents products from famous Zlatoust knife manufacturers. All models do not belong to edged weapons, which is documented.",
-      mission: 'Zlatmax.It is an internet magazine with only parts made visible to the user,but only the appearance of this website is made. ',
-      language: 'HTML5, CSS3, Java Script',
-      images: zlatmax,
-      link: 'https://zlatmax-clone-abdulazizs.vercel.app/',
-      github: 'https://github.com/abdulazizsaidovcode/Zlatmax__clone'
-    },
-    {
       name: 'Pacman',
+      type: 'game',
       des: "A Pac-Man game written in JavaScript (JS), an implementation of the JavaScript programming language to define a version of the classic arcade game to run in web browsers.",
       mission: 'is a deep understanding of java scripting down to the basics',
       language: 'HTML5, CSS3, Java Script',
@@ -45,6 +48,7 @@ function Projects() {
       link: 'https://abdulazizs-pacman.vercel.app/',
       github: 'https://github.com/abdulazizsaidovcode/PACMAN'
     },
+
 
   ]);
 
