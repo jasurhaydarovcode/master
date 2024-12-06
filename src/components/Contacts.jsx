@@ -17,12 +17,12 @@ function Contacts() {
       <div className="generall__border px-20 py-10 text-center text-5xl font-museo-moderno font-sans flex justify-center items-end mb-7" >
           <h1 data-cursor-style>My Contacts</h1>
       </div>
-      <div className=" flex py-10 gap-10" >
+      <div className=" flex py-10 gap-10 flex-col sm:flex-row" >
         {
           listContacts.map((value, key) => (
-            <div data-cursor-style className='generall__border p-5' key={key}>
+            <div data-cursor-style className='generall__border p-5 md:w-max w-full' key={key}>
               <h3 className='text-4xl'>{value.title}</h3>
-              <div>{value.value}</div>
+              <h5>{value.value}</h5>
             </div>
           ))
         }
