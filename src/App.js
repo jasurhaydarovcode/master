@@ -1,60 +1,92 @@
-import './App.css'
-import Home from './components/Home'
-import Projects from './components/Projects'
-import Contacts from './components/Contacts'
 import React, { useState, useEffect } from 'react';
+import './App.css';
+import Home from './components/Home';
+import Projects from './components/Projects';
+import Contacts from './components/Contacts';
 import Skils from './components/skils';
 import NavBar from './components/NavBar';
 import Cubanimation from './components/cubanimation';
 import ThreeJsScene from './components/Prackricle-bg';
-import { ColorProvider, useColor } from './provider/color';
 import Link from './components/Link';
 
-
 function App() {
-
   const [cursorPos, setCursorPos] = useState({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
   const [targetPos, setTargetPos] = useState({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
-
-  const { textColor } = useColor();
-
-  useEffect(() => {
-    document.documentElement.style.setProperty('--dynamic-color', textColor);
-  }, [textColor])
+  const [cursorStyle, setCursorStyle] = useState({});
+  const [cursorVisibility, setCursorVisibility] = useState(false);
+  const [isFollowingElement, setIsFollowingElement] = useState(false);
 
   useEffect(() => {
-    // Kursorning yangi pozitsiyasini hisoblash
     const moveCursor = () => {
-      // Animatsiya tezligi
       const easeAmount = 0.3;
       const dx = (targetPos.x - cursorPos.x) * easeAmount;
       const dy = (targetPos.y - cursorPos.y) * easeAmount;
-
-      // Kursorning yangi pozitsiyasini o'rnatish
       setCursorPos(prev => ({
         x: prev.x + dx,
-        y: prev.y + dy
+        y: prev.y + dy,
       }));
     };
-
-    // Animatsiyani davom ettirish uchun "requestAnimationFrame" dan foydalanish
     const animationFrameId = requestAnimationFrame(moveCursor);
-
-    // Animatsiyani tozalash
     return () => cancelAnimationFrame(animationFrameId);
-  }, [cursorPos, targetPos]); // cursorPos va targetPos o'zgarganda useEffect qayta ishga tushadi
+  }, [cursorPos, targetPos]);
 
   const handleMouseMove = (e) => {
-    // Kursorning maqsadli pozitsiyasini yangilash
-    setTargetPos({ x: e.clientX, y: e.clientY });
+    if (!isFollowingElement) {
+      setTargetPos({ x: e.clientX, y: e.clientY });
+    }
   };
+
+  useEffect(() => {
+    const handleMouseEnter = (e) => {
+      if (e?.target?.getAttribute) {
+        const cursorStyleAttr = e.target.getAttribute('data-cursor-style');
+        if (cursorStyleAttr) {
+          const rect = e.target.getBoundingClientRect();
+          const style = JSON.parse(cursorStyleAttr);
+          setCursorStyle({
+            ...style,
+            left: rect.x -5,
+            top: rect.y,
+            width: `${rect.width + 10}px`,
+            height: `${rect.height}px`,
+            borderRadius: style.borderRadius || '0%',
+            transform: 'translate(0,0)',
+            transition: 'all .3s ease-in-out',
+            borderColor: 'red',
+            borderWidth: 2,
+            borderRadius: 10
+          });
+          setCursorVisibility(true);
+          setIsFollowingElement(true);
+        }
+      }
+    };
+
+    const handleMouseLeave = () => {
+      setCursorStyle({
+        width: '100px',
+        height: '100px',
+        borderRadius: '50%',
+      });
+      setCursorVisibility(false);
+      setIsFollowingElement(false);
+    };
+
+    document.addEventListener('mouseenter', handleMouseEnter, true);
+    document.addEventListener('mouseleave', handleMouseLeave, true);
+
+    return () => {
+      document.removeEventListener('mouseenter', handleMouseEnter, true);
+      document.removeEventListener('mouseleave', handleMouseLeave, true);
+    };
+  }, []);
+
 
   const handleMouseLeave = () => {
-    // Brauzer oynasidan chiqqanda kursor shaklini markazga qo'yish
     setTargetPos({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
+    setCursorVisibility(false);
+    setIsFollowingElement(false);
   };
-
-
 
   return (
     <div
@@ -63,7 +95,6 @@ function App() {
       onMouseLeave={handleMouseLeave}
       style={{ cursor: 'crosshair' }} // Sistemaning kursorini yashirish
     >
-      {/* colorProvider */}
       <NavBar />
       <main>
         <Home />
@@ -72,30 +103,21 @@ function App() {
         <Projects />
         <Contacts />
       </main>
-      {/* Cursor */}
       <div
-        className="cursor-blob md:block hidden"
+        className={`cursor-blob ${!cursorVisibility && 'cursor-blob-anim'} md:block hidden`}
         style={{
-          position: 'fixed', // Kursor har doim oynaning bir joyida turishini ta'minlash
+          position: 'fixed',
           left: `${cursorPos.x}px`,
           top: `${cursorPos.y}px`,
-          width: '100px',
-          height: '100px',
-          transform: 'translate(-50%, -50%)', // Kursor shaklini o'rtaga qo'yish
-          pointerEvents: 'none', // Kursorning o'zi bilan interaktsiyani bloklash
-          borderRadius: '50%', // Kursorning shakli
-          mixBlendMode: 'difference' // Orqadagi rangga aks ta'sir qilish uslubi
+          // pointerEvents: 'none',
+          // mixBlendMode: 'difference',
+          transform: 'translate(-50%, -50%)',
+          ...cursorStyle,
         }}
       />
-
-      {/* cube amination */}
       <Cubanimation />
-
-      {/* three js background */}
       <ThreeJsScene />
-
     </div>
-
   );
 }
 

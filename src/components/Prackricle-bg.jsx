@@ -20,25 +20,14 @@ const ThreeJsScene = () => {
     const parameterCount = useRef(0);
     const parameters = useRef([]);
 
-
-
-
     // Sahifani yuklaganda va o'lcham o'zgarishida WebGL sahifasini boshlash
     useEffect(() => {
         init();
         animate();
-
         return () => {
             init();
         };
     }, []);
-
-    
-
-    
-
-    
-
 
     // WebGL sahifasini boshlash funksiyasi
     function init() {

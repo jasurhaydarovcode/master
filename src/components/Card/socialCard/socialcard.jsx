@@ -2,7 +2,7 @@ import React from 'react';
 
 function SocialCard() {
   return (
-    <div className='flex gap-5 md:mt-36'>
+    <div className='flex gap-5 md:mt-36 sm:flex-row flex-col'>
       <div>
         <a href='https://t.me/Abdulaziz_saidov' className="rounded-2xl flex items-center p-2 w-64 rel mb-2  hover:scale-105 transition-all generall__border">
           <i class="fa-brands fa-telegram rounded-fullmd:w-12 md:h-12  mr-3 md:text-5xl text-4xl"></i>
