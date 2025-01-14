@@ -12,8 +12,6 @@ const NavBar = () => {
                 <div className="transition-all">
                     <Btnfirst text='Download Cv' link={'/'} />
                 </div>
-
-
             </header>
         </>
     )
