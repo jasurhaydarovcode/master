@@ -28,7 +28,6 @@ const ThreeJsScene = () => {
     useEffect(() => {
         init();
         animate();
-
         return () => {
             // Cleanup on component unmount
             window.removeEventListener("resize", onWindowResize);

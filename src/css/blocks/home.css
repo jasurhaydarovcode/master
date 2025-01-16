@@ -1,7 +1,18 @@
 .text-anim {
-    background-image: linear-gradient(to right, var(--dynamic-color), #7f1ab6c2, var(--dynamic-color), #7F40AC, var(--dynamic-color));
-    background-size: 200% auto;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    animation: shine 5s linear infinite;
+  position: relative;
+  z-index: 20;
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    var(--dynamic-color, transparent),
+    #6330fe,
+    var(--dynamic-color, transparent),
+    #6330fe,
+    var(--dynamic-color, transparent)
+  );
+  background-size: 200% auto;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text; /* Extra support */
+  animation: shine 7s linear infinite;
 }

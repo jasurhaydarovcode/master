@@ -59,7 +59,7 @@ function Projects() {
         <div className='w-max generall__border mx-auto py-5'>
 
           <div className="font-museo-moderno font-system mt-0 mb-10 text-center text-[5vw] flex justify-center items-end md:px-36" >
-            <p>My Projects</p>
+            <p data-cursor-style>My Projects</p>
           </div>
 
           <div className=" text-center max-w-[500px] m-auto flex justify-center items-end" >
@@ -88,8 +88,8 @@ function Projects() {
                 <div className='generall__border p-4'>
 
                   <div className='md:p-5 p-3 generall__border mb-3'>
-                    <h3 className='text-5xl m-0'>{value.name}</h3>
-                    <p className="text-left w-full text-white mt-5">{value.des}</p>
+                    <h3 data-cursor-style className='text-5xl m-0 w-max'>{value.name}</h3>
+                    <p data-cursor-style className="text-left w-full text-white mt-5">{value.des}</p>
                   </div>
 
                   <div className='md:p-5 p-2 generall__border'>
@@ -97,16 +97,16 @@ function Projects() {
                     <div className="rel grid grid-cols-[70px,1fr] items-center md:gap-3 gap-1">
                       <div className='bg-[#cccccc54] md:w-14 md:h-14 w-10 h-10 text-xl flex justify-center items-center rounded-md'><FontAwesomeIcon icon={faPersonCircleQuestion} /></div>
                       <div>
-                        <h4>Mission</h4>
-                        <div className="text-xs">{value.mission}</div>
+                        <h4 data-cursor-style className='w-max'>Mission</h4>
+                        <div data-cursor-style className="text-xs">{value.mission}</div>
                       </div>
                     </div>
 
                     <div className="rel grid grid-cols-[70px,1fr] items-center md:gap-3 gap-1 mt-3">
                       <div className='bg-[#cccccc54] md:w-14 md:h-14 w-10 h-10 text-xl flex justify-center items-center rounded-md'><FontAwesomeIcon icon={faEarthAmericas} /></div>
                       <div>
-                        <h4>Languages</h4>
-                        <div className="">{value.language}</div>
+                        <h4 data-cursor-style className='w-max'>Languages</h4>
+                        <div data-cursor-style className="">{value.language}</div>
                       </div>
                     </div>
 
