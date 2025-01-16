@@ -63,7 +63,7 @@ function Projects() {
           </div>
 
           <div className=" text-center max-w-[500px] m-auto flex justify-center items-end" >
-            <p data-cursor-style className='px-3'>Lorem ipsum dolor sit amet.</p>
+            <p className='px-3'>A brief overview of my projects.</p>
           </div>
 
         </div>

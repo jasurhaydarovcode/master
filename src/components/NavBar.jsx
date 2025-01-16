@@ -5,12 +5,12 @@ import Btnfirst from "./buttons/First";
 const NavBar = () => {
     return (
         <>
-            <header className="bg-transparent bg-red-400 fixed w-full h-20 flex top-0 items-center justify-between z-10 px-20">
+            <header className="bg-transparent bg-red-400 fixed w-full h-20 flex top-0 items-center justify-between z-20 px-20">
                 <div className="logo">
                     <img src="/logo.png" alt="" /> Portfolio
                 </div>
                 <div className="transition-all">
-                    <Btnfirst text='Download Cv' link={'/'} />
+                    <Btnfirst text='Download Cv' link={'Abdulaziz_Abdusaidov_Frontend_Engineer.pdf'} />
                 </div>
             </header>
         </>
