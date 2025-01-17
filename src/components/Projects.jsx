@@ -7,10 +7,10 @@ import 'aos/dist/aos.css';
 import pacman from "../Assets/projects/Pacman.png"
 import qrpay from "../Assets/projects/qrpay.png"
 import pch from "../Assets/projects/pch14.png"
-import sfera_systems from "../Assets/projects/sfera_system.webp"
-import gsr_logistic from "../Assets/projects/GSR Logistic Management.webp"
-import gts_office from "../Assets/projects/gts_office.png"
-import bookers from "../Assets/projects/bookers.webp"
+import sfera_systems from "../Assets/projects/sfera_system.jpg"
+import gsr_logistic from "../Assets/projects/GSR Logistic Management.png"
+import gts_office from "../Assets/projects/gts-office.jpg"
+import bookers from "../Assets/projects/bookers.jpg"
 
 function Projects() {
   useEffect(() => {
