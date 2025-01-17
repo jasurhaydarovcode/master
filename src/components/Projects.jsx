@@ -7,6 +7,10 @@ import 'aos/dist/aos.css';
 import pacman from "../Assets/projects/Pacman.png"
 import qrpay from "../Assets/projects/qrpay.png"
 import pch from "../Assets/projects/pch14.png"
+import sfera_systems from "../Assets/projects/sfera_system.webp"
+import gsr_logistic from "../Assets/projects/GSR Logistic Management.webp"
+import gts_office from "../Assets/projects/gts_office.png"
+import bookers from "../Assets/projects/bookers.webp"
 
 function Projects() {
   useEffect(() => {
@@ -48,8 +52,46 @@ function Projects() {
       link: 'https://abdulazizs-pacman.vercel.app/',
       github: 'https://github.com/abdulazizsaidovcode/PACMAN'
     },
-
-
+    {
+      "name": "Sfera Systems",
+      "type": "educational management system",
+      "des": "A comprehensive system for educational centers that manages student registrations, attendance, assessments, video tutorials, and evaluates student performance while monitoring the status of the educational center.",
+      "mission": "To systematize the management of educational centers and enhance the educational process through efficient use of technology.",
+      "language": "React js, Next, Zustand, React query, Typescript, Acernaty UI, Shadcn UI",
+      "images": sfera_systems,
+      "link": "",
+      "github": "https://github.com/abdulazizsaidovcode"
+    }
+    , {
+      "name": "GSR Logistic Management",
+      "type": "logistics management system",
+      "des": "A system designed to manage logistics companies, offering features like fleet management, cargo tracking, and operational efficiency.",
+      "mission": "To streamline operations for logistics companies and provide a centralized platform for managing logistics operations.",
+      "language": "React js, Zustand, Type Script, React query, Chakra UI",
+      "images": gsr_logistic,
+      "link": "",
+      "github": "https://github.com/abdulazizsaidovcode"
+    },
+    {
+      "name": "GTS1 Office Testing System",
+      "type": "pre-employment testing system",
+      "des": "A system that provides testing services for office spaces before employment, helping companies ensure that their new hires are fit for their roles.",
+      "mission": "To assist companies in making informed hiring decisions by providing comprehensive pre-employment testing.",
+      "language": "React js, Zustand, Type Script, React query, Chacra UI",
+      "images": gts_office,
+      "link": "",
+      "github": "https://github.com/abdulazizsaidovcode"
+    },
+    {
+      "name": "Bookers",
+      "type": "Mobile Application for Beauty and Wellness Services",
+      "des": "Bookers is a mobile application dedicated to beauty and wellness services. Users can easily book various services, manage their time and statistics. They also have the option to choose service times in beauty salons.",
+      "mission": "To provide users with the best beauty and health services and make them easily accessible.",
+      "language": "React js, Tailwindcss, Firebase, Ant Design",
+      "images": bookers,
+      "link": "",
+      "github": "https://github.com/abdulazizsaidovcode"
+    }
   ]);
 
 
