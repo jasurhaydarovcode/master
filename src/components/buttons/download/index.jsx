@@ -1,8 +1,8 @@
 import "./style.css";
 
-function Btnfirst({ text = "btn", link = "#" }) {
+function BtnDownload({ text = "btn", link = "#" }) {
     return (
-        <a href={link} target="_blank">
+        <a href={link} target="_blank" download>
             <button className="btn rel">
                 <span className="text">Text</span>
                 <span className="flip-front">{text}</span>
@@ -17,4 +17,4 @@ function Btnfirst({ text = "btn", link = "#" }) {
     );
 }
 
-export default Btnfirst;
+export default BtnDownload;
